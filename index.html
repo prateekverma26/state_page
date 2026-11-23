@@ -224,11 +224,6 @@
     .gr-brief { position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 28px; padding: 38px 38px 34px; box-shadow: 0 18px 40px rgba(54,42,29,.08); }
     .gr-brief::before { content: ''; position: absolute; left: 0; top: 0; right: 0; height: 5px; background: linear-gradient(90deg, #FF9933, #E9B23C, #2E8B4A); }
     .gr-brief-foot { margin-top: auto; display: flex; flex-direction: column; gap: 22px; padding-top: 26px; border-top: 1px solid var(--line-2); }
-    .gr-quick { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-    .gr-q { display: flex; gap: 12px; align-items: flex-start; background: var(--cream-2); border: 1px solid var(--line-2); border-radius: 12px; padding: 14px 16px; min-width: 0; }
-    .gr-q .msym { font-size: 22px; color: var(--gold-d); margin-top: 2px; }
-    .gr-q small { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-    .gr-q b { display: block; font-size: 15px; line-height: 1.35; margin-top: 3px; }
     .gr-stack { display: flex; flex-direction: column; gap: var(--g); margin-top: var(--blk); }
     .gr-contacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; margin-top: 22px; }
     .gr-contacts .gr-grp { margin-top: 0; }
@@ -406,7 +401,6 @@
       .gr-people .gr-av { width: 40px; height: 40px; font-size: 13px; }
     }
     @media (max-width: 560px) {
-      .gr-quick { grid-template-columns: minmax(0, 1fr); }
     }
     @media (max-width: 480px) {
       .gr-focus-grid, .gr-leaders { grid-template-columns: minmax(0, 1fr); }
@@ -489,11 +483,6 @@
               <span>Aligned with</span>
               <span class="gr-tag"><span class="msym" aria-hidden="true">flag</span>Viksit Gujarat @2047</span>
               <span class="gr-tag"><span class="msym" aria-hidden="true">flag</span>Viksit Bharat @2047</span>
-            </div>
-            <div class="gr-quick">
-              <sc-for list="{{ quick }}" as="q" hint-placeholder-count="3">
-                <div class="gr-q"><span class="msym" aria-hidden="true">{{ q.icon }}</span><span><small>{{ q.label }}</small><b>{{ q.value }}</b></span></div>
-              </sc-for>
             </div>
           </div>
         </div>
@@ -1251,11 +1240,6 @@ class Component extends DCLogic {
         const n = Math.max(1, Math.min(g.people.length, 3));
         return { title: g.title, cls: 'gr-grp gr-span-' + n, n: String(n), people: g.people.map(p => this.person(p)) };
       }),
-      quick: [
-        { icon: 'event', label: 'Established', value: d.year },
-        { icon: 'school', label: 'Lead Knowledge Institution', value: d.lki.name },
-        { icon: 'category', label: 'Focus sectors', value: String(d.focus.length) }
-      ],
       lkiNodal,
       pubs: d.publications.map((p, i) => ({
         type: p.type, date: p.date, title: p.title,
