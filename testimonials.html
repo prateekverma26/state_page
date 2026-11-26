@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/svg+xml" href="/logo_niti-mukrilf2-nq3e.svg">
+<title>Testimonials – State Support Mission</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="ds-local/tokens/fonts.css">
+  <link rel="stylesheet" href="ds-local/tokens/fig-tokens.css">
+  <link rel="stylesheet" href="ds-local/tokens/semantic.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=block" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: linear-gradient(160deg, #FAF0D8 0%, #FFFDF7 34%, #FFFFFF 52%, #FBF7EE 74%, #F4EDDC 100%) fixed; font-family: 'Poppins', 'Noto Sans', sans-serif; color: rgb(23,23,23); }
+    a { color: rgb(107,74,47); text-decoration: none; }
+    a:hover { color: rgb(84,58,37); text-decoration: underline; }
+    .msym { font-family: 'Material Symbols Outlined'; font-weight: 400; font-style: normal; display: inline-block; line-height: 1; letter-spacing: normal; -webkit-font-smoothing: antialiased; user-select: none; }
+  </style>
+</helmet>
+
+<div style="min-width: 1100px">
+<div style="height: 4px; background: linear-gradient(90deg, #FF9933 0%, #E9B23C 35%, #FFFFFF 55%, #2E8B4A 100%)"></div>
+<div style="background: rgb(54,42,29); color: rgba(255,255,255,0.92); font-size: 12.5px; display: flex; align-items: center; justify-content: space-between; padding: 6px 40px">
+  <div style="display: flex; align-items: center; gap: 16px"><span>भारत सरकार</span><span style="opacity: 0.4">|</span><span>Government of India</span></div>
+  <div style="display: flex; align-items: center; gap: 6px"><span class="msym" style="font-size: 16px">language</span>English</div>
+</div>
+
+<header style="background: #FFFFFF; border-bottom: 1px solid rgb(229,229,229); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 50">
+  <a href="/" style="display: flex; align-items: center; gap: 14px; text-decoration: none">
+    <img src="./logo_niti-mukrilf2-nq3e.svg" alt="NITI Aayog" style="height: 52px; width: auto; display: block">
+    <span style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 20px; font-weight: 700; color: rgb(23,23,23); line-height: 1.2">State Support Mission</span>
+      <span style="font-size: 12px; color: rgb(115,115,115)">NITI Aayog · Government of India</span>
+    </span>
+  </a>
+  <nav style="display: flex; align-items: center; gap: 28px; font-size: 14.5px; font-weight: 600">
+    <a href="/#overview" style="color: rgb(23,23,23)">Overview</a>
+    <a href="/#workshop" style="color: rgb(23,23,23)">SITs</a>
+    <a href="/#workshop" style="color: rgb(23,23,23)">LKIs</a>
+    <a href="/#workshops" style="color: rgb(23,23,23)">Workshops</a>
+    <a href="/publications" style="color: rgb(23,23,23)">Publications</a>
+    <a href="/login" style="background: rgb(54,42,29); color: #FFFFFF; font-size: 13.5px; font-weight: 600; padding: 9px 20px; border-radius: 8px; text-decoration: none">Admin Login</a>
+  </nav>
+</header>
+
+<main data-screen-label="Testimonials" style="max-width: 1200px; margin: 0 auto; padding: 32px 40px 80px">
+  <nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 6px; font-size: 13px; color: rgb(115,115,115)">
+    <a href="/">Home</a>
+    <span class="msym" style="font-size: 16px">chevron_right</span>
+    <span style="color: rgb(23,23,23); font-weight: 600">Testimonials</span>
+  </nav>
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-top: 18px; flex-wrap: wrap">
+    <div>
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(176,124,44); margin-bottom: 10px">Testimonials</div>
+      <h1 style="font-size: 38px; font-weight: 700; line-height: 1.15; margin: 0">Voices from the States</h1>
+      <p style="font-size: 15px; line-height: 1.6; color: rgb(82,82,82); margin: 10px 0 0; max-width: 620px; text-align: justify">What State Institutions for Transformation and Lead Knowledge Institutions say about working with the State Support Mission.</p>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px">
+      <sc-for list="{{ chips }}" as="chip" hint-placeholder-count="4">
+        <button onClick="{{ chip.onSelect }}" style="font-family: inherit; font-size: 13px; font-weight: 600; padding: 7px 18px; border-radius: 999px; border: 1px solid {{ chip.border }}; background: {{ chip.bg }}; color: {{ chip.fg }}; cursor: pointer; transition: background 200ms, color 200ms">{{ chip.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+
+  <section aria-label="Video testimonials" style="margin-top: 36px; display: flex; flex-direction: column; gap: 24px">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+      <sc-for list="{{ gridVideos }}" as="v" hint-placeholder-count="3">
+        <article style="background: #FFFFFF; border: 1px solid rgb(233,222,199); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; transition: transform 200ms, box-shadow 200ms, border-color 200ms" style-hover="transform: translateY(-3px); box-shadow: 0 12px 26px rgba(54,42,29,0.14); border-color: rgb(196,158,105)">
+          <button onClick="{{ v.open }}" aria-label="Play video: {{ v.name }}" style="position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; padding: 0; border: 0; background: rgb(54,42,29); cursor: pointer; overflow: hidden">
+            <video src="{{ v.srcMeta }}" poster="{{ v.poster }}" preload="metadata" muted="{{ true }}" playsInline="{{ true }}" style="width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none"></video>
+            <span style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(54,42,29,0) 40%, rgba(54,42,29,0.55) 100%)"></span>
+            <span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.92); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,0.3)"><span class="msym" style="font-size: 32px; color: rgb(107,74,47); margin-left: 3px">play_arrow</span></span>
+            <span style="position: absolute; right: 12px; bottom: 12px; background: rgba(0,0,0,0.65); color: #FFFFFF; font-size: 11.5px; font-weight: 600; padding: 3px 8px; border-radius: 5px">{{ v.duration }}</span>
+            <span style="position: absolute; left: 12px; top: 12px; background: rgb(54,42,29); color: #E9B23C; font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; padding: 4px 9px; border-radius: 6px">{{ v.cat }}</span>
+          </button>
+          <div style="padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 14px; flex: 1">
+            <div>
+              <div style="font-size: 15px; font-weight: 700; line-height: 1.3">{{ v.lead.name }}</div>
+              <div style="font-size: 12.5px; color: rgb(115,115,115); line-height: 1.45; margin-top: 3px">{{ v.lead.role }}</div>
+            </div>
+            <blockquote style="margin: 0; font-size: 13.5px; line-height: 1.65; color: rgb(55,55,55); text-wrap: pretty; padding-top: 14px; border-top: 1px solid rgb(240,233,218); text-align: justify">{{ v.lead.quote }}</blockquote>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+
+    <sc-for list="{{ wideVideos }}" as="v" hint-placeholder-count="1">
+      <article style="background: #FFFFFF; border: 1px solid rgb(233,222,199); border-radius: 14px; overflow: hidden; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); transition: box-shadow 200ms, border-color 200ms" style-hover="box-shadow: 0 12px 26px rgba(54,42,29,0.14); border-color: rgb(196,158,105)">
+        <button onClick="{{ v.open }}" aria-label="Play video: {{ v.name }}" style="position: relative; display: block; width: 100%; height: 100%; min-height: 280px; padding: 0; border: 0; background: rgb(54,42,29); cursor: pointer; overflow: hidden">
+          <video src="{{ v.srcMeta }}" poster="{{ v.poster }}" preload="metadata" muted="{{ true }}" playsInline="{{ true }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none"></video>
+          <span style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(54,42,29,0) 40%, rgba(54,42,29,0.55) 100%)"></span>
+          <span style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,0.92); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,0.3)"><span class="msym" style="font-size: 36px; color: rgb(107,74,47); margin-left: 3px">play_arrow</span></span>
+          <span style="position: absolute; right: 12px; bottom: 12px; background: rgba(0,0,0,0.65); color: #FFFFFF; font-size: 11.5px; font-weight: 600; padding: 3px 8px; border-radius: 5px">{{ v.duration }}</span>
+          <span style="position: absolute; left: 12px; top: 12px; background: rgb(54,42,29); color: #E9B23C; font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; padding: 4px 9px; border-radius: 6px">{{ v.cat }}</span>
+        </button>
+        <div style="padding: 26px 28px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px">
+          <sc-for list="{{ v.speakers }}" as="s" hint-placeholder-count="2">
+            <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+              <figcaption>
+                <div style="font-size: 15px; font-weight: 700; line-height: 1.3">{{ s.name }}</div>
+                <div style="font-size: 12.5px; color: rgb(115,115,115); line-height: 1.45; margin-top: 3px">{{ s.role }}</div>
+              </figcaption>
+              <blockquote style="margin: 0; font-size: 13.5px; line-height: 1.65; color: rgb(55,55,55); text-wrap: pretty; padding-top: 14px; border-top: 1px solid rgb(240,233,218); text-align: justify">{{ s.quote }}</blockquote>
+            </figure>
+          </sc-for>
+        </div>
+      </article>
+    </sc-for>
+  </section>
+
+</main>
+
+<sc-if value="{{ playerOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closePlayer }}" role="dialog" aria-modal="true" aria-label="Video player" style="position: fixed; inset: 0; z-index: 200; background: rgba(20,14,8,0.88); display: flex; align-items: center; justify-content: center; padding: 40px">
+    <div onClick="{{ stop }}" style="width: min(1040px, 100%); background: rgb(30,23,16); border-radius: 14px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.6)">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 18px 14px 22px; color: #FFFFFF">
+        <div style="min-width: 0">
+          <div style="font-size: 16px; font-weight: 700; line-height: 1.3">{{ current.name }}</div>
+          <div style="font-size: 12.5px; color: rgba(255,255,255,0.65); margin-top: 2px">{{ current.role }}</div>
+        </div>
+        <button onClick="{{ closePlayer }}" aria-label="Close" style="width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.1); color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0" style-hover="background: rgba(255,255,255,0.22)"><span class="msym" style="font-size: 24px">close</span></button>
+      </div>
+      <video key="{{ current.src }}" src="{{ current.src }}" controls="{{ true }}" autoPlay="{{ true }}" playsInline="{{ true }}" style="display: block; width: 100%; aspect-ratio: 16 / 9; background: #000"></video>
+    </div>
+  </div>
+</sc-if>
+
+<footer style="background: rgb(54,42,29); color: rgba(255,255,255,0.75); font-size: 13px; padding: 22px 40px; display: flex; justify-content: space-between">
+  <span>© State Support Mission, NITI Aayog, Government of India</span>
+  <a href="/" style="color: #E9B23C; font-weight: 600">Back to home</a>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { cat: 'All', playing: null };
+  videos = [
+    { id: 'aparna', cat: 'LKI', name: 'Ms. S. Aparna', role: 'CEO, GRIT, Govt. of Gujarat', src: 'assets/videos/aparna-grit.mp4', duration: '', speakers: [
+      { name: 'Ms. S. Aparna', role: 'CEO, Gujarat Rajya Institution for Transformation (GRIT), Govt. of Gujarat', quote: '“I would say that setting up of GRIT under the State Support Mission in the form of a think tank has been extremely useful for our state in providing strategic inputs aligned with the government\'s development vision by bringing views and expertise from academia as well as other stakeholders.”' }
+    ] },
+    { id: 'joshi', cat: 'SIT', name: 'Shri Rajshekhar Joshi', role: 'Vice Chairman, SETU Aayog, Govt. of Uttarakhand', src: 'assets/videos/joshi-setu-uttarakhand.mp4', duration: '', speakers: [
+      { name: 'Shri Rajshekhar Joshi', role: 'Vice Chairman, SETU (State Institute for Empowering and Transforming Uttarakhand) Aayog, Govt. of Uttarakhand', quote: '“NITI Aayog\'s State Support Mission has been very beneficial in the formation and strengthening of State Institutes for Transformation (SITs) in the provinces, which are essentially the state-level formats of NITI Aayog. It has played a great role in best practices sharing, capacity building, conferences, and dialogue between different states. In the modern developmental model and the evolution of policies, SITs have significant importance, especially regarding ecosystem thinking. SITs play a major role in the ecosystem model of policy, outcome orientation, technology, and collaborations.”' }
+    ] },
+    { id: 'mizoram', cat: 'SIT', name: 'Shri Lamalsawma Pachuau & Ms. Chingthanmawii Guite', role: 'Govt. of Mizoram', src: 'assets/videos/pachuau-guite-mizoram.mp4', duration: '', speakers: [
+      { name: 'Shri Lamalsawma Pachuau', role: 'Secretary, Planning and Programme Implementation Department, Govt. of Mizoram', quote: '“Through the SIT set up with the support of NITI Aayog, we are able to bring together various stakeholders from academia, civil society, as well as government departments. All the discussions and research have enabled us to come up with a shared vision for our future in line with Viksit Bharat 2047. We are coming up with a vision plan, Transformed Mizoram 2047. It is through the support we are receiving from the State Support Mission that we are able to achieve this milestone, the first of its kind in Mizoram.”' },
+      { name: 'Ms. Chingthanmawii Guite', role: 'Advisor-cum-Joint Secretary Planning, Govt. of Mizoram', quote: '“Through the State Support Mission, digital tools such as the Mizoram plan analytics M Plan dashboard have been developed, which has now allowed us to monitor the state\'s development projects and schemes in one platform which has enabled improved resource allocation and created an emerging correlation between investments and outcomes.”' }
+    ] },
+    { id: 'sampath', cat: 'SIT', name: 'Shri Sampath Kumar IAS', role: 'Development Commissioner, MGIL, Govt. of Meghalaya', src: 'assets/videos/sampath-kumar-meghalaya.mp4', duration: '', speakers: [
+      { name: 'Shri Sampath Kumar IAS', role: 'Development Commissioner, MGIL, Govt. of Meghalaya', quote: '“Through the Meghalaya Government Innovation Lab, State Institution for Transformation set up under the State Support Mission of NITI Aayog, Meghalaya has developed a very unique model for development, which we call the Human Development Pyramid, where the entire focus is on how we are actually building the entire human capital.”' }
+    ] }
+  ];
+  componentDidMount() {
+    this.onKey = e => { if (e.key === 'Escape') this.setState({ playing: null }); };
+    window.addEventListener('keydown', this.onKey);
+    this.videos.forEach(v => {
+      const el = document.createElement('video'); el.preload = 'metadata'; el.src = v.src;
+      el.onloadedmetadata = () => { const s = Math.round(el.duration); v.duration = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; this.forceUpdate(); };
+    });
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); }
+  componentDidMount() {
+    this.onKey = e => { if (e.key === 'Escape') this.setState({ playing: null }); };
+    window.addEventListener('keydown', this.onKey);
+    this.videos.forEach(v => {
+      const el = document.createElement('video'); el.preload = 'metadata'; el.src = v.src;
+      el.onloadedmetadata = () => { const s = Math.round(el.duration); v.duration = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`; this.forceUpdate(); };
+    });
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); }
+  data = [
+    { cat: 'SIT', quote: 'Placeholder quote — the SIT has helped us align departmental plans with measurable outcomes and review progress every quarter.', name: 'Name of official', role: 'Designation, SIT, State', initials: 'SI' },
+    { cat: 'LKI', quote: 'Placeholder quote — working as a Lead Knowledge Institution has given our researchers a direct channel to support State policy.', name: 'Name of official', role: 'Designation, LKI', initials: 'LK' },
+    { cat: 'State', quote: 'Placeholder quote — structured engagement with NITI Aayog has made our planning more evidence-based and data-driven.', name: 'Name of official', role: 'Designation, Planning Department, State', initials: 'PD' },
+    { cat: 'SIT', quote: 'Placeholder quote — add the testimonial text here.', name: 'Name of official', role: 'Designation, SIT, State', initials: 'SI' },
+    { cat: 'LKI', quote: 'Placeholder quote — add the testimonial text here.', name: 'Name of official', role: 'Designation, LKI', initials: 'LK' },
+    { cat: 'State', quote: 'Placeholder quote — add the testimonial text here.', name: 'Name of official', role: 'Designation, Department, State', initials: 'PD' }
+  ];
+  renderVals() {
+    const c = this.state.cat;
+    const vis = this.videos.filter(v => c === 'All' || v.cat === c).map(v => ({ ...v, lead: v.speakers[0], poster: v.src.replace('.mp4', '.png'), srcMeta: v.src + '#t=1.5', open: () => this.setState({ playing: v.id }) }));
+    return {
+      chips: ['All', 'SIT', 'LKI', 'State'].map(k => {
+        const on = c === k;
+        return { label: k, onSelect: () => this.setState({ cat: k }), bg: on ? 'rgb(107,74,47)' : '#FFFFFF', fg: on ? '#FFFFFF' : 'rgb(82,82,82)', border: on ? 'rgb(107,74,47)' : 'rgb(229,229,229)' };
+      }),
+      gridVideos: vis.filter(v => v.speakers.length === 1),
+      wideVideos: vis.filter(v => v.speakers.length > 1),
+      playerOpen: !!this.state.playing,
+      current: this.videos.find(v => v.id === this.state.playing) || {},
+      closePlayer: () => this.setState({ playing: null }),
+      stop: e => e.stopPropagation()
+    };
+  }
+}
+</script>
+</body>
+</html>

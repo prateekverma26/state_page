@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="/logo_niti-mukrilf2-nq3e.svg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIT Gujarat – State Support Mission</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="rgb(54,42,29)"></rect>
+    <text x="50" y="60" text-anchor="middle" font-family="sans-serif" font-size="30" font-weight="700" fill="#E9B23C">GRIT</text>
+  </svg>
+</template>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=block" rel="stylesheet">
+  <style>
+    :root {
+      --br: #362A1D; --br-2: #543A25; --br-3: #6B4A2F;
+      --gold: #E9B23C; --gold-2: #F2C35B; --gold-d: #8A5C14; --gold-line: #D9B56A;
+      --cream: #FFFAF0; --cream-2: #FAF4E6; --cream-3: #F3EAD3;
+      --line: #E5E1D6; --line-2: #F0ECE2;
+      --ink: #171717; --body: #404040; --muted: #625C52;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+      --g: 20px;   /* gap between sibling cards */
+      --blk: 64px; /* gap between blocks inside a section */
+    }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: 'Poppins', 'Noto Sans', sans-serif; color: var(--ink); background: var(--cream); -webkit-font-smoothing: antialiased; }
+    a { color: var(--br-3); text-decoration: none; }
+    a:hover { color: var(--br-2); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+    button { font-family: inherit; }
+    h1, h2, h3, h4, p, ul { margin: 0; }
+    .msym { font-family: 'Material Symbols Outlined'; font-weight: 400; font-style: normal; display: inline-block; line-height: 1; letter-spacing: normal; -webkit-font-smoothing: antialiased; user-select: none; flex: none; }
+
+    /* reveal on scroll — only hides content once JS is running */
+    [data-reveal] { transition: opacity .7s ease, transform .7s var(--ease); }
+    .gr-js [data-reveal]:not(.in) { opacity: 0; transform: translateY(22px); }
+
+    /* page chrome */
+    .gr-skip { position: absolute; left: -9999px; top: 10px; z-index: 300; background: var(--br); color: #fff; padding: 10px 16px; border-radius: 8px; font-weight: 600; }
+    .gr-skip:focus { left: 12px; color: #fff; }
+    .gr-progress { position: fixed; top: 0; left: 0; right: 0; height: 4px; background: rgba(54,42,29,.12); z-index: 150; }
+    .gr-progress > div { height: 100%; background: linear-gradient(90deg, #FF9933 0%, #E9B23C 35%, #FFFFFF 55%, #2E8B4A 100%); transition: width 90ms linear; }
+    .gr-strip { background: var(--br); color: rgba(255,255,255,.92); font-size: 12.5px; padding: 11px 40px 7px; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; justify-content: space-between; }
+    .gr-strip a { color: #fff; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+    .gr-header { position: sticky; top: 0; z-index: 80; background: rgba(255,255,255,.93); -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); padding: 12px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 28px; }
+    .gr-brand { display: flex; align-items: center; gap: 14px; }
+    .gr-brand img { height: 48px; width: auto; display: block; }
+    .gr-brand b { display: block; font-size: 19px; line-height: 1.2; color: var(--ink); }
+    .gr-brand small { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .gr-nav { display: flex; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; }
+    .gr-nav a { color: var(--ink); padding: 10px 16px; border-radius: 999px; transition: background .25s, color .25s; white-space: nowrap; }
+    .gr-nav a:hover { background: var(--cream-3); color: var(--ink); }
+    .gr-nav a[aria-current="true"] { background: var(--br); color: #fff; }
+
+    /* layout helpers */
+    .gr-wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    .gr-sec { padding: 92px 0; scroll-margin-top: 80px; }
+    .gr-eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: 12.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-d); }
+    .gr-eyebrow::before { content: ''; width: 30px; height: 2px; background: var(--gold); border-radius: 2px; }
+    .gr-eyebrow.on-dark { color: var(--gold-2); }
+    .gr-h2 { font-size: 36px; line-height: 1.18; font-weight: 700; letter-spacing: -.015em; margin-top: 14px; text-wrap: balance; }
+    .gr-h2 em { font-style: normal; color: var(--br-3); }
+    .gr-h3 { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+    .gr-h3::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+    .gr-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; }
+    .gr-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 46px; padding: 0 22px; border-radius: 10px; font-size: 14px; font-weight: 600; border: 1px solid transparent; cursor: pointer; transition: transform .25s var(--ease), background .25s, box-shadow .25s, border-color .25s; text-align: center; }
+    .gr-btn:hover { transform: translateY(-2px); }
+    .gr-btn.gold { background: var(--gold); color: var(--br); box-shadow: 0 10px 24px rgba(233,178,60,.28); }
+    .gr-btn.gold:hover { background: var(--gold-2); color: var(--br); }
+    .gr-btn.ghost { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.35); }
+    .gr-btn.ghost:hover { background: rgba(255,255,255,.14); color: #fff; }
+    .gr-btn.dark { background: var(--br); color: #fff; }
+    .gr-btn.dark:hover { background: var(--br-2); color: #fff; box-shadow: 0 10px 22px rgba(54,42,29,.22); }
+    .gr-btn.line { background: #fff; color: var(--br-3); border-color: var(--br-3); }
+    .gr-btn.line:hover { background: var(--cream-2); color: var(--br-2); }
+    .gr-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: var(--br-3); }
+    .gr-link:hover { color: var(--br-2); }
+    .gr-link:hover .msym { transform: translate(2px, -2px); }
+    .gr-link .msym { transition: transform .25s var(--ease); }
+    .gr-av { flex: none; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--br); background: linear-gradient(160deg, #F6D58A, #D9A13A); letter-spacing: .02em; }
+    .gr-copy { flex: none; width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--line); background: #fff; color: var(--br-3); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s, border-color .2s; }
+    .gr-copy:hover { background: var(--cream-2); border-color: var(--gold-line); }
+
+    /* hero */
+    .gr-hero { position: relative; color: #fff; overflow: hidden; isolation: isolate; background: radial-gradient(1100px 520px at 80% 42%, rgba(233,178,60,.17), transparent 62%), linear-gradient(135deg, #241B12 0%, #362A1D 50%, #4A3421 100%); }
+    .gr-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(255,255,255,.08) 1px, transparent 1.3px); background-size: 26px 26px; -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.15)); mask-image: linear-gradient(180deg, rgba(0,0,0,.95), rgba(0,0,0,.15)); }
+    .gr-water { position: absolute; left: 12px; bottom: 64px; z-index: -1; font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif; font-weight: 700; font-size: 250px; line-height: 1; color: rgba(255,255,255,.045); white-space: nowrap; pointer-events: none; user-select: none; }
+    .gr-crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 12.5px; color: rgba(255,255,255,.78); }
+    .gr-crumbs a { color: rgba(255,255,255,.78); }
+    .gr-crumbs a:hover { color: #fff; }
+    .gr-hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: 40px 56px; align-items: center; padding: 36px 0 76px; }
+    .gr-pill { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--br); background: var(--gold); border-radius: 999px; padding: 6px 14px; }
+    .gr-title { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .gr-acr { font-size: clamp(64px, 9vw, 104px); line-height: .95; font-weight: 700; letter-spacing: -.035em; background: linear-gradient(180deg, #FBE2A0 0%, #E9B23C 58%, #C98F27 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .gr-full { font-size: 24px; line-height: 1.35; font-weight: 500; color: rgba(255,255,255,.94); text-wrap: balance; max-width: 560px; }
+    .gr-tri { width: 220px; height: 4px; border-radius: 999px; margin-top: 22px; background: linear-gradient(90deg, #FF9933 0 22%, #FFFFFF 42% 58%, #2E8B4A 78% 100%); }
+    .gr-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 32px; max-width: 620px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.2); border-radius: 18px; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); overflow: hidden; }
+    .gr-fact { display: flex; gap: 14px; align-items: flex-start; padding: 16px 20px; min-width: 0; }
+    .gr-fact:nth-child(2) { border-left: 1px solid rgba(255,255,255,.16); }
+    .gr-fact:nth-child(n+3) { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.16); }
+    .gr-fact .msym { font-size: 22px; color: var(--gold-2); margin-top: 2px; }
+    .gr-fact small { display: block; font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.74); }
+    .gr-fact b { display: block; font-size: 16.5px; line-height: 1.4; font-weight: 600; margin-top: 3px; }
+    .gr-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .gr-map { position: relative; height: 430px; display: flex; align-items: center; justify-content: center; }
+    .gr-ring { position: absolute; border-radius: 999px; border: 1px solid rgba(233,178,60,.22); }
+    .gr-map-chip { position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.24); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); border-radius: 999px; padding: 8px 16px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+
+    /* about */
+    .gr-about-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--g); align-items: stretch; margin-top: 40px; }
+    .gr-lead { font-size: 17px; line-height: 1.85; color: var(--body); text-wrap: pretty; }
+    .gr-align { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .gr-align > span:first-child { font-size: 12.5px; font-weight: 600; color: var(--muted); margin-right: 4px; }
+    .gr-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--cream-3); border: 1px solid #E6D6AE; color: var(--br); border-radius: 999px; padding: 8px 16px; font-size: 13.5px; font-weight: 600; }
+    .gr-tag .msym { font-size: 18px; color: var(--gold-d); }
+    .gr-glance { position: relative; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 18px 40px rgba(54,42,29,.08); }
+    .gr-glance::before { content: ''; display: block; flex: none; height: 5px; background: linear-gradient(90deg, #FF9933, #E9B23C, #2E8B4A); }
+    .gr-glance-row { padding: 22px 26px; border-bottom: 1px solid var(--line-2); flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+    .gr-glance-row:last-child { border-bottom: 0; }
+    .gr-glance-row > small { display: block; font-size: 12.5px; font-weight: 600; color: var(--muted); margin-bottom: 10px; }
+    .gr-badge { display: inline-flex; align-items: center; gap: 8px; background: #EEF6EC; color: #1F5A2F; border: 1px solid #CBE2C7; border-radius: 999px; padding: 6px 14px 6px 10px; font-size: 13.5px; font-weight: 600; }
+    .gr-badge .msym { font-size: 19px; }
+    .gr-focus-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--g); margin-top: 22px; }
+    .gr-focus { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 16px; transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s; }
+    .gr-focus:hover { transform: translateY(-4px); border-color: var(--gold-line); box-shadow: 0 16px 34px rgba(54,42,29,.12); }
+    .gr-focus-no { position: absolute; top: 18px; right: 20px; font-size: 13px; font-weight: 700; color: #B9AE98; letter-spacing: .06em; }
+    .gr-focus-ic { width: 48px; height: 48px; border-radius: 12px; background: var(--cream-3); color: var(--gold-d); display: flex; align-items: center; justify-content: center; transition: background .35s, color .35s; }
+    .gr-focus-ic .msym { font-size: 26px; }
+    .gr-focus:hover .gr-focus-ic { background: var(--br); color: var(--gold-2); }
+    .gr-focus-t { font-size: 15.5px; font-weight: 600; line-height: 1.4; margin-top: auto; }
+    .gr-mosaic { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 232px 232px; gap: var(--g); margin-top: 22px; }
+    .gr-photo { position: relative; display: block; padding: 0; border: 0; border-radius: 16px; overflow: hidden; cursor: zoom-in; background: var(--cream-3); min-height: 0; }
+    .gr-photo.is-big { grid-row: span 2; }
+    .gr-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .9s var(--ease); }
+    .gr-photo:hover img { transform: scale(1.05); }
+    .gr-photo-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 18px 15px; background: linear-gradient(180deg, transparent, rgba(26,18,10,.86)); color: #fff; font-size: 13px; font-weight: 500; line-height: 1.45; text-align: left; opacity: 0; transform: translateY(8px); transition: opacity .35s var(--ease), transform .35s var(--ease); }
+    .gr-photo:hover .gr-photo-cap, .gr-photo:focus-visible .gr-photo-cap { opacity: 1; transform: none; }
+    .gr-photo-zoom { position: absolute; top: 12px; right: 12px; width: 38px; height: 38px; border-radius: 999px; background: rgba(255,255,255,.94); color: var(--br); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,.18); }
+    .gr-photo-zoom .msym { font-size: 20px; }
+    @media (hover: none) { .gr-photo-cap { opacity: 1; transform: none; } }
+
+    /* organization */
+    .gr-sec.tint { background: var(--cream-2); border-top: 1px solid #EBDDBA; border-bottom: 1px solid #EBDDBA; }
+    .gr-leaders { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--g); margin-top: 22px; }
+    .gr-leader { padding: 24px 22px 22px; display: flex; flex-direction: column; gap: 16px; transition: transform .35s var(--ease), box-shadow .35s var(--ease); position: relative; overflow: hidden; }
+    .gr-leader::before { content: ''; position: absolute; left: 0; top: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-2)); }
+    .gr-leader:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(54,42,29,.1); }
+    .gr-leader .gr-av { width: 68px; height: 68px; font-size: 22px; }
+    .gr-leader b { display: block; font-size: 17px; line-height: 1.3; }
+    .gr-leader span.r { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.5; margin-top: 4px; }
+    /* (org grid replaced by .gr-stack) */
+    .gr-pad { padding: 26px 28px; }
+    .gr-card-h { display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 700; }
+    .gr-card-h .msym { width: 40px; height: 40px; border-radius: 10px; background: var(--cream-3); color: var(--gold-d); display: inline-flex; align-items: center; justify-content: center; font-size: 22px; }
+    .gr-grp { margin-top: 22px; }
+    .gr-grp > small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-d); padding-bottom: 8px; border-bottom: 1px solid var(--line-2); }
+    .gr-contact { display: flex; align-items: center; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line-2); }
+    .gr-contact:last-child { border-bottom: 0; padding-bottom: 0; }
+    .gr-contact .gr-av { width: 46px; height: 46px; font-size: 15px; }
+    .gr-contact-m { flex: 1; min-width: 0; }
+    .gr-contact-m b { display: block; font-size: 15px; line-height: 1.3; }
+    .gr-contact-m small { display: block; font-size: 12.5px; color: var(--muted); margin-top: 1px; }
+    .gr-contact-m a { display: inline-block; font-size: 13px; font-weight: 600; margin-top: 4px; overflow-wrap: anywhere; }
+    .gr-tree, .gr-tree ul { list-style: none; padding: 0; }
+    .gr-tree { margin-top: 22px; }
+    .gr-tree ul { margin-left: 28px; padding-left: 32px; }
+    .gr-tree li { position: relative; padding: 7px 0; }
+    .gr-tree ul > li::before { content: ''; position: absolute; left: -32px; top: 0; bottom: 0; border-left: 2px solid var(--gold-line); }
+    .gr-tree ul > li:last-child::before { bottom: auto; height: 45px; }
+    .gr-tree ul > li::after { content: ''; position: absolute; left: -32px; top: 45px; width: 32px; border-top: 2px solid var(--gold-line); }
+    .gr-node { display: flex; align-items: center; gap: 14px; min-height: 76px; padding: 12px 16px; background: #fff; border: 1px solid var(--line); border-radius: 12px; box-sizing: border-box; }
+    .gr-node .ic { width: 42px; height: 42px; border-radius: 10px; background: var(--cream-3); color: var(--gold-d); display: flex; align-items: center; justify-content: center; flex: none; }
+    .gr-node .ic .msym { font-size: 23px; }
+    .gr-node b { display: block; font-size: 14.5px; line-height: 1.35; }
+    .gr-node small { display: block; font-size: 12.5px; line-height: 1.45; color: var(--muted); margin-top: 2px; }
+    .gr-node.primary { background: var(--br); border-color: var(--br); color: #fff; box-shadow: 0 12px 26px rgba(54,42,29,.22); }
+    .gr-node.primary .ic { background: rgba(255,255,255,.12); color: var(--gold-2); }
+    .gr-node.primary small { color: rgba(255,255,255,.78); }
+    .gr-note { display: flex; gap: 12px; align-items: flex-start; margin-top: 18px; padding: 14px 16px; border-radius: 12px; background: var(--cream-2); border: 1px dashed var(--gold-line); font-size: 13.5px; line-height: 1.6; color: var(--body); }
+    .gr-note .msym { color: var(--gold-d); font-size: 22px; }
+    .gr-badge + .gr-grno { margin-top: 12px; }
+    .gr-grno { font-size: 13.5px; line-height: 1.6; color: var(--body); margin: 0 0 16px; overflow-wrap: anywhere; }
+    .gr-cap { font-size: 13.5px; line-height: 1.65; color: var(--muted); margin-top: 10px; }
+    .gr-gov-meet { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 12px; font-weight: 600; color: var(--gold-d); background: var(--cream-3); border-radius: 999px; padding: 4px 12px 4px 10px; }
+    .gr-dl { margin: 6px 0 0; }
+    .gr-dl > div { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 4px 16px; padding: 11px 0; border-bottom: 1px solid var(--line-2); }
+    .gr-dl > div:last-child { border-bottom: 0; padding-bottom: 0; }
+    .gr-dl dt { font-size: 12.5px; font-weight: 700; color: var(--br-3); }
+    .gr-dl dd { margin: 0; font-size: 14px; line-height: 1.6; color: var(--body); }
+    .st-reg { --c: #E08A55; --t: #FCE9DD; }
+    .st-post { --c: #D9A21F; --t: #FFF1C9; }
+    .st-cons { --c: #4F9F6E; --t: #E1F2E7; }
+    .st-add { --c: #5A8FC8; --t: #E0ECF8; }
+    .gr-node.has-st { border-left: 5px solid var(--c); }
+    .gr-node > span:last-child { min-width: 0; }
+    .gr-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 7px; }
+    .gr-st { display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 600; color: var(--br); background: var(--t); border: 1px solid var(--c); border-radius: 999px; padding: 2px 10px 2px 8px; }
+    .gr-st::before { content: ''; width: 8px; height: 8px; border-radius: 3px; background: var(--c); }
+    .gr-str { display: inline-flex; align-items: center; font-size: 12px; font-weight: 700; letter-spacing: .02em; color: var(--br-3); background: var(--cream-3); border-radius: 6px; padding: 2px 9px; }
+    .gr-pair { display: grid; grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr); align-items: center; }
+    .gr-pair-link { display: block; height: 2px; background: var(--gold-line); }
+
+    .gr-chart-grid { display: block; }
+    .gr-chart-side { display: none; }
+    .gr-legend { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .gr-legend li { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--body); }
+    .gr-sw { flex: none; width: 14px; height: 14px; border-radius: 4px; background: var(--c); }
+    .gr-chart-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .gr-key { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 22px; padding: 14px 20px; background: var(--cream-2); border: 1px solid var(--line-2); border-radius: 12px; }
+    .gr-key-t { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-d); }
+    .gr-key .gr-legend { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+    .gr-key-n { flex: 1 1 100%; padding-top: 12px; border-top: 1px dashed #DCCDA6; font-size: 13px; line-height: 1.5; color: var(--muted); }
+    .gr-tree .gr-node > span:last-child { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 16px; align-items: center; }
+    .gr-tree .gr-node > span:last-child > b, .gr-tree .gr-node > span:last-child > small { grid-column: 1; }
+    .gr-tree .gr-node .gr-meta { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; justify-content: flex-end; }
+    .gr-note { margin-top: 22px; }
+    .gr-brief { position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 28px; padding: 38px 38px 34px; box-shadow: 0 18px 40px rgba(54,42,29,.08); }
+    .gr-brief::before { content: ''; position: absolute; left: 0; top: 0; right: 0; height: 5px; background: linear-gradient(90deg, #FF9933, #E9B23C, #2E8B4A); }
+    .gr-brief-foot { margin-top: auto; display: flex; flex-direction: column; gap: 22px; padding-top: 26px; border-top: 1px solid var(--line-2); }
+    .gr-stack { display: flex; flex-direction: column; gap: var(--g); margin-top: var(--blk); }
+    .gr-contacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; margin-top: 22px; }
+    .gr-contacts .gr-grp { margin-top: 0; }
+    .gr-span-1 { grid-column: span 1; }
+    .gr-span-2 { grid-column: span 2; }
+    .gr-span-3 { grid-column: span 3; }
+    .gr-people { display: grid; grid-template-columns: repeat(var(--n, 1), minmax(0, 1fr)); gap: 12px 28px; margin-top: 14px; }
+    .gr-people .gr-contact { padding: 16px; border: 1px solid var(--line-2); border-radius: 12px; background: #FFFCF5; }
+    .gr-people .gr-contact:last-child { padding-bottom: 16px; border-bottom: 1px solid var(--line-2); }
+    .gr-gov-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 4px; }
+    .gr-gov-cols .gr-grp:nth-child(1) { padding-right: 40px; }
+    .gr-gov-cols .gr-grp:nth-child(2) { padding-left: 40px; border-left: 1px solid var(--line-2); }
+    .gr-lki-grid > div:last-child { display: flex; flex-direction: column; }
+    .gr-timeline { flex: 1; }
+    .gr-timeline .gr-empty { flex: 1; }
+
+    /* activities */
+    .gr-subnav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+    .gr-subnav a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: #fff; border: 1px solid var(--line); color: var(--ink); font-size: 14px; font-weight: 600; transition: background .25s, border-color .25s, transform .25s var(--ease); }
+    .gr-subnav a:hover { background: var(--cream-3); border-color: var(--gold-line); color: var(--ink); transform: translateY(-2px); }
+    .gr-subnav .msym { font-size: 20px; color: var(--gold-d); }
+    .gr-block { margin-top: 64px; scroll-margin-top: 96px; }
+    .gr-pubs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--g); margin-top: 22px; }
+    .gr-pub { overflow: hidden; display: flex; flex-direction: column; transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+    .gr-pub:hover { transform: translateY(-5px); box-shadow: 0 18px 38px rgba(54,42,29,.13); }
+    .gr-pub-shelf { position: relative; display: flex; align-items: center; justify-content: center; height: 300px; background: radial-gradient(260px 200px at 50% 45%, #FFFFFF 0%, transparent 70%), linear-gradient(180deg, var(--cream-3) 0%, var(--cream-2) 100%); border-bottom: 1px solid var(--line-2); overflow: hidden; }
+    .gr-pub-shelf::after { content: ''; position: absolute; left: 14%; right: 14%; bottom: 18px; height: 14px; border-radius: 50%; background: rgba(54,42,29,.18); filter: blur(10px); }
+    .gr-pub-shelf img { position: relative; z-index: 1; height: 248px; width: auto; border-radius: 3px; box-shadow: 0 1px 2px rgba(0,0,0,.2), 0 18px 32px rgba(54,42,29,.3); transition: transform .5s var(--ease); }
+    .gr-pub:hover .gr-pub-shelf img { transform: translateY(-6px) rotate(-1.5deg) scale(1.02); }
+    .gr-pub-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+    .gr-pub-body .tag { display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: var(--gold-d); background: var(--cream-3); border-radius: 999px; padding: 5px 12px; }
+    .gr-pub-body h4 { font-size: 17px; line-height: 1.35; font-weight: 700; }
+    .gr-pub-body .sub { font-size: 13.5px; line-height: 1.55; color: var(--muted); margin-top: -6px; }
+    .gr-pub-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12.5px; color: var(--muted); }
+    .gr-pub-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .gr-pub-meta .msym { font-size: 16px; color: var(--gold-d); }
+    .gr-pub-act { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+    .gr-pub-act .gr-btn { min-height: 42px; padding: 0 16px; font-size: 13.5px; flex: 1 1 120px; }
+    .gr-ws-list-wrap { display: flex; flex-direction: column; gap: var(--g); margin-top: 22px; }
+    .gr-ws { overflow: hidden; transition: box-shadow .3s var(--ease), border-color .3s; }
+    .gr-ws:hover { border-color: var(--gold-line); }
+    .gr-ws-btn { width: 100%; display: flex; align-items: center; gap: 20px; padding: 20px 24px; background: transparent; border: 0; cursor: pointer; text-align: left; color: var(--ink); }
+    .gr-ws-btn:hover { background: #FFFCF5; }
+    .gr-ws-tile { flex: none; width: 74px; height: 78px; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--cream-3); border: 1px solid #E6D6AE; color: var(--br); }
+    .gr-ws-tm { display: block; width: 100%; text-align: center; background: var(--br); color: var(--gold-2); font-size: 11px; font-weight: 700; letter-spacing: .1em; padding: 5px 0; }
+    .gr-ws-td { display: flex; flex: 1; align-items: center; justify-content: center; font-size: 17px; font-weight: 700; }
+    .gr-ws-tile .msym { font-size: 32px; color: var(--gold-d); }
+    .gr-ws-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+    .gr-ws-title { font-size: 18px; line-height: 1.4; font-weight: 600; text-wrap: balance; }
+    .gr-ws-meta { display: flex; flex-wrap: wrap; gap: 8px; }
+    .gr-ws-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); background: var(--cream-2); border: 1px solid var(--line-2); border-radius: 999px; padding: 5px 12px; }
+    .gr-ws-chip .msym { font-size: 16px; color: var(--gold-d); }
+    .gr-ws-chev { flex: none; width: 44px; height: 44px; border-radius: 999px; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--br-3); transition: transform .35s var(--ease), background .25s; }
+    .gr-ws-btn[aria-expanded="true"] .gr-ws-chev { transform: rotate(180deg); background: var(--br); color: #fff; border-color: var(--br); }
+    .gr-ws-panel { padding: 4px 24px 26px 118px; display: flex; flex-direction: column; gap: 16px; animation: gr-fade .45s var(--ease); }
+    .gr-ws-panel p { font-size: 15px; line-height: 1.8; color: var(--body); text-wrap: pretty; }
+    .gr-ws-lt { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--gold-d); margin-bottom: 8px; }
+    .gr-ws-ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 8px 24px; }
+    .gr-ws-ul li { position: relative; padding-left: 26px; font-size: 14.5px; line-height: 1.6; color: var(--body); }
+    .gr-ws-ul li::before { content: ''; position: absolute; left: 4px; top: 9px; width: 8px; height: 8px; border-radius: 2px; background: var(--gold); transform: rotate(45deg); }
+    .gr-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--g); margin-top: 22px; align-items: stretch; }
+    .gr-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 14px; padding: 40px 28px; min-height: 280px; border: 2px dashed #DCCDA6; background: repeating-linear-gradient(135deg, #FFFCF5 0 14px, #FBF5E5 14px 28px); border-radius: 16px; }
+    .gr-empty .ic { width: 64px; height: 64px; border-radius: 999px; background: #fff; border: 1px solid #E6D6AE; display: flex; align-items: center; justify-content: center; color: var(--gold-d); }
+    .gr-empty .ic .msym { font-size: 30px; }
+    .gr-empty b { font-size: 17px; line-height: 1.4; }
+    .gr-empty p { font-size: 14px; line-height: 1.7; color: var(--muted); max-width: 340px; }
+    .gr-empty.on-dark { border-color: rgba(233,178,60,.4); background: repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 14px, rgba(255,255,255,.07) 14px 28px); }
+    .gr-empty.on-dark .ic { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.22); color: var(--gold-2); }
+    .gr-empty.on-dark b { color: #fff; }
+    .gr-empty.on-dark p { color: rgba(255,255,255,.8); }
+    .gr-vision { position: relative; overflow: hidden; color: #fff; border-radius: 16px; padding: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 26px; background: radial-gradient(500px 300px at 100% 0%, rgba(233,178,60,.22), transparent 60%), linear-gradient(140deg, #261D14 0%, #362A1D 55%, #543A25 100%); }
+    .gr-vision-cover { flex: none; display: block; width: 150px; transform: rotate(-3deg); transition: transform .5s var(--ease); }
+    .gr-vision-cover img { display: block; width: 100%; height: auto; border-radius: 4px; box-shadow: 0 24px 44px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.18); }
+    .gr-vision:hover .gr-vision-cover { transform: rotate(0deg) translateY(-4px); }
+    .gr-vision-m { flex: 1 1 230px; min-width: 0; }
+    .gr-vision-m .k { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-2); }
+    .gr-vision-m h4 { font-size: 26px; line-height: 1.2; font-weight: 700; margin-top: 8px; }
+    .gr-vision-m p { font-size: 14.5px; line-height: 1.7; color: rgba(255,255,255,.88); margin-top: 10px; text-wrap: pretty; }
+    .gr-vision-m .gr-cta { margin-top: 20px; }
+    .gr-vision-meta { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,.8); }
+
+    /* LKI */
+    .gr-lki { background: radial-gradient(900px 400px at 100% 0%, rgba(233,178,60,.14), transparent 60%), linear-gradient(135deg, #241B12 0%, #362A1D 60%, #432F1E 100%); color: #fff; }
+    .gr-lki-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 40px; align-items: stretch; margin-top: 40px; }
+    .gr-lki-card { background: #fff; color: var(--ink); border-radius: 18px; overflow: hidden; box-shadow: 0 24px 50px rgba(0,0,0,.3); display: flex; flex-direction: column; }
+    .gr-lki-top { display: flex; align-items: center; gap: 18px; padding: 26px 28px; border-bottom: 1px solid var(--line-2); }
+    .gr-mono { flex: none; width: 76px; height: 76px; border-radius: 16px; background: var(--br); color: var(--gold-2); display: flex; align-items: center; justify-content: center; font-size: 21px; font-weight: 700; letter-spacing: .02em; }
+    .gr-lki-top small { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-d); }
+    .gr-lki-top b { display: block; font-size: 23px; line-height: 1.25; margin-top: 4px; }
+    .gr-lki-row { padding: 22px 28px; border-bottom: 1px solid var(--line-2); flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; }
+    .gr-lki-row:last-child { border-bottom: 0; }
+    .gr-lki-row > small { display: block; font-size: 12.5px; font-weight: 600; color: var(--muted); margin-bottom: 12px; }
+    .gr-lki-h { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; }
+    .gr-lki-h .msym { color: var(--gold-2); font-size: 26px; }
+    .gr-timeline { margin-top: 22px; margin-left: 6px; padding-left: 32px; border-left: 2px dashed rgba(233,178,60,.5); display: flex; flex-direction: column; gap: 20px; position: relative; }
+    .gr-timeline::before { content: ''; position: absolute; left: -9px; top: 6px; width: 16px; height: 16px; border-radius: 999px; background: var(--gold); box-shadow: 0 0 0 6px rgba(233,178,60,.2); }
+
+    /* footer + floating */
+    .gr-foot { background: #1B140D; color: rgba(255,255,255,.78); font-size: 13px; padding: 26px 40px; display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between; }
+    .gr-foot a { color: #fff; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+    .gr-foot a:hover { color: var(--gold-2); }
+    .gr-top { position: fixed; right: 24px; bottom: 24px; z-index: 90; width: 52px; height: 52px; border-radius: 999px; border: 0; background: var(--br); color: var(--gold-2); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 14px 30px rgba(54,42,29,.35); transition: opacity .3s, transform .3s var(--ease), background .2s; }
+    .gr-top:hover { background: var(--br-2); }
+    .gr-toast { position: fixed; left: 50%; bottom: 28px; z-index: 260; display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: #fff; border-radius: 12px; padding: 13px 20px; font-size: 14px; font-weight: 500; box-shadow: 0 16px 34px rgba(0,0,0,.3); transition: opacity .3s, transform .35s var(--ease); pointer-events: none; }
+    .gr-toast .msym { color: var(--gold-2); font-size: 20px; }
+    .gr-lb { position: fixed; inset: 0; z-index: 250; background: rgba(20,14,8,.93); display: flex; align-items: center; justify-content: center; padding: 28px 84px; animation: gr-fade .3s ease; }
+    .gr-lb-fig { margin: 0; max-width: 100%; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .gr-lb-fig img { max-width: 100%; max-height: 78vh; border-radius: 12px; box-shadow: 0 30px 70px rgba(0,0,0,.55); display: block; }
+    .gr-lb-fig figcaption { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; justify-content: space-between; width: 100%; color: rgba(255,255,255,.9); font-size: 14px; line-height: 1.5; }
+    .gr-lb-count { font-weight: 700; color: var(--gold-2); letter-spacing: .06em; }
+    .gr-lb-btn { position: absolute; width: 52px; height: 52px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.1); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s; }
+    .gr-lb-btn:hover { background: rgba(255,255,255,.22); }
+    .gr-lb-btn .msym { font-size: 28px; }
+    .gr-lb-close { top: 20px; right: 20px; }
+    .gr-lb-prev { left: 18px; top: 50%; margin-top: -26px; }
+    .gr-lb-next { right: 18px; top: 50%; margin-top: -26px; }
+    @keyframes gr-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+    /* responsive */
+    @media (max-width: 1020px) {
+      .gr-hero-grid { grid-template-columns: minmax(0, 1fr); padding-bottom: 56px; }
+      .gr-map { height: 360px; }
+      .gr-water { font-size: 190px; bottom: 50px; }
+      .gr-about-grid, .gr-lki-grid, .gr-chart-grid { grid-template-columns: minmax(0, 1fr); }
+      .gr-focus-grid, .gr-leaders { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gr-contacts { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+      .gr-span-1, .gr-span-2, .gr-span-3 { grid-column: auto; }
+      .gr-gov-cols { grid-template-columns: minmax(0, 1fr); }
+      .gr-gov-cols .gr-grp:nth-child(n) { padding: 0; border: 0; }
+      .gr-two { grid-template-columns: minmax(0, 1fr); }
+      .gr-chart-side { position: static; margin-top: 0; }
+      .gr-glance { position: static; }
+      .gr-ws-panel { padding-left: 24px; }
+    }
+    @media (max-width: 760px) {
+      .gr-wrap { padding: 0 20px; }
+      .gr-strip, .gr-header, .gr-foot { padding-left: 20px; padding-right: 20px; }
+      .gr-sec { padding: 64px 0; }
+      .gr-h2 { font-size: 28px; }
+      .gr-nav { width: 100%; overflow-x: auto; padding-bottom: 2px; -ms-overflow-style: none; scrollbar-width: none; }
+      .gr-nav::-webkit-scrollbar { display: none; }
+      .gr-mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-rows: 170px; }
+      .gr-photo.is-big { grid-column: span 2; grid-row: auto; }
+      .gr-facts { grid-template-columns: minmax(0, 1fr); }
+      .gr-fact:nth-child(2) { border-left: 0; border-top: 1px solid rgba(255,255,255,.16); }
+      .gr-ws-btn { padding: 16px; gap: 14px; align-items: flex-start; }
+      .gr-ws-tile { width: 60px; height: 66px; }
+      .gr-ws-title { font-size: 16px; }
+      .gr-ws-panel { padding: 4px 16px 22px; }
+      .gr-pad { padding: 22px 18px; }
+      .gr-pair { grid-template-columns: minmax(0, 1fr); }
+      .gr-pair-link { width: 2px; height: 16px; margin: 0 auto; }
+      .gr-tree ul { margin-left: 8px; padding-left: 20px; }
+      .gr-tree ul > li::before { left: -20px; }
+      .gr-tree ul > li::after { left: -20px; width: 20px; }
+      .gr-node { padding: 10px 12px; gap: 10px; }
+      .gr-tree .gr-node > span:last-child { display: block; }
+      .gr-tree .gr-node .gr-meta { margin-top: 7px; justify-content: flex-start; }
+      .gr-node .ic { width: 34px; height: 34px; }
+      .gr-dl > div { grid-template-columns: minmax(0, 1fr); }
+      .gr-lb { padding: 70px 14px 24px; }
+      .gr-lb-prev { left: 10px; top: auto; bottom: 14px; margin-top: 0; }
+      .gr-lb-next { right: 10px; top: auto; bottom: 14px; margin-top: 0; }
+      .gr-water { font-size: 100px; left: 16px; bottom: 32px; }
+      .gr-vision { padding: 24px 20px; }
+      .gr-lki-top, .gr-lki-row { padding-left: 20px; padding-right: 20px; }
+    }
+    @media (max-width: 860px) {
+      .gr-pubs { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .gr-brief { padding: 28px 22px; }
+      .gr-people { grid-template-columns: minmax(0, 1fr); }
+      .gr-people .gr-contact { padding: 14px 12px; gap: 10px; }
+      .gr-people .gr-av { width: 40px; height: 40px; font-size: 13px; }
+    }
+    @media (max-width: 560px) {
+    }
+    @media (max-width: 480px) {
+      .gr-focus-grid, .gr-leaders { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .gr-js [data-reveal]:not(.in) { opacity: 1; transform: none; }
+    }
+  </style>
+</helmet>
+
+<div class="gr-root" ref="{{ rootRef }}">
+  <a class="gr-skip" href="#main">Skip to main content</a>
+  <div class="gr-progress" aria-hidden="true"><div style="width: {{ progressW }}"></div></div>
+
+  <!-- ══ Government strip + header ══ -->
+  <div class="gr-strip">
+    <div style="display: flex; align-items: center; gap: 16px"><span>भारत सरकार</span><span style="opacity: .4">|</span><span>Government of India</span></div>
+    <a href="/"><span class="msym" aria-hidden="true" style="font-size: 16px">arrow_back</span>Back to State Support Mission</a>
+  </div>
+  <header class="gr-header">
+    <a class="gr-brand" href="/">
+      <img src="logo_niti-mukrilf2-nq3e.svg" alt="NITI Aayog">
+      <span><b>State Support Mission</b><small>NITI Aayog · Government of India</small></span>
+    </a>
+    <nav class="gr-nav" aria-label="Page sections">
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="4">
+        <a href="{{ n.href }}" aria-current="{{ n.current }}">{{ n.label }}</a>
+      </sc-for>
+    </nav>
+  </header>
+
+  <main id="main">
+  <!-- ══ 1 · Hero banner ══ -->
+  <section class="gr-hero" aria-labelledby="hero-title">
+    <div class="gr-water" aria-hidden="true" lang="hi">गुजरात</div>
+    <div class="gr-wrap">
+      <div class="gr-crumbs" style="padding-top: 28px">
+        <a href="/">SSM</a><span class="msym" aria-hidden="true" style="font-size: 15px">chevron_right</span><span>SITs</span><span class="msym" aria-hidden="true" style="font-size: 15px">chevron_right</span><span style="color: var(--gold-2); font-weight: 600">GRIT, Gujarat</span>
+      </div>
+      <div class="gr-hero-grid">
+        <div>
+          <span class="gr-pill"><span class="msym" aria-hidden="true" style="font-size: 16px">account_balance</span>State Institution for Transformation</span>
+          <h1 class="gr-title" id="hero-title">
+            <span class="gr-acr">GRIT</span>
+            <span class="gr-full">Gujarat Rajya Institution for Transformation</span>
+          </h1>
+          <div class="gr-tri" aria-hidden="true"></div>
+          <div class="gr-facts">
+            <div class="gr-fact"><span class="msym" aria-hidden="true">location_on</span><span><small>State</small><b>Gujarat</b></span></div>
+            <div class="gr-fact"><span class="msym" aria-hidden="true">event</span><span><small>Year of establishment</small><b>2024</b></span></div>
+            <div class="gr-fact"><span class="msym" aria-hidden="true">school</span><span><small>Lead Knowledge Institution (LKI)</small><b>IIM Ahmedabad</b></span></div>
+            <div class="gr-fact"><span class="msym" aria-hidden="true">category</span><span><small>Category</small><b>SIT as a separate institution parallel to the Planning Dept./Body</b></span></div>
+          </div>
+          <div class="gr-cta">
+            <a class="gr-btn gold" href="https://www.grit.gujarat.gov.in" target="_blank" rel="noopener noreferrer">Visit GRIT website<span class="msym" aria-hidden="true" style="font-size: 19px">open_in_new</span></a>
+            <a class="gr-btn ghost" href="#activities">Explore activities<span class="msym" aria-hidden="true" style="font-size: 19px">arrow_downward</span></a>
+          </div>
+        </div>
+        <div class="gr-map">
+          <div class="gr-ring" aria-hidden="true" style="width: 380px; height: 380px"></div>
+          <div class="gr-ring" aria-hidden="true" style="width: 300px; height: 300px; border-style: dashed"></div>
+          <div ref="{{ stateMapRef }}" role="img" aria-label="Map of Gujarat" style="position: relative; width: 100%; height: 370px; display: flex; align-items: center; justify-content: center"></div>
+          <div class="gr-map-chip"><span class="msym" aria-hidden="true" style="font-size: 18px; color: var(--gold-2)">location_on</span>Gujarat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 2 · About SIT ══ -->
+  <section id="about" class="gr-sec" aria-labelledby="about-h">
+    <div class="gr-wrap">
+      <div data-reveal=""><span class="gr-eyebrow">About SIT</span><h2 class="gr-h2" id="about-h">Gujarat's apex <em>policy think tank</em></h2></div>
+      <div class="gr-about-grid">
+        <div class="gr-card gr-brief" data-reveal="">
+          <p class="gr-lead">{{ brief }}</p>
+          <div class="gr-brief-foot">
+            <div class="gr-align">
+              <span>Aligned with</span>
+              <span class="gr-tag"><span class="msym" aria-hidden="true">flag</span>Viksit Gujarat @2047</span>
+              <span class="gr-tag"><span class="msym" aria-hidden="true">flag</span>Viksit Bharat @2047</span>
+            </div>
+          </div>
+        </div>
+        <aside class="gr-card gr-glance" aria-label="GRIT at a glance" data-reveal="">
+          <div class="gr-glance-row">
+            <small>SIT website</small>
+            <a class="gr-btn dark" style="width: 100%; box-sizing: border-box" href="{{ siteUrl }}" target="_blank" rel="noopener noreferrer">{{ siteLabel }}<span class="msym" aria-hidden="true" style="font-size: 19px">open_in_new</span></a>
+          </div>
+          <div class="gr-glance-row">
+            <small>Government Resolution (GR)</small>
+            <span class="gr-badge"><span class="msym" aria-hidden="true">check_circle</span>GR issued · {{ gr.date }}</span>
+            <p class="gr-grno"><b>GR No.</b> {{ gr.no }}<br>{{ gr.dept }}</p>
+            <a class="gr-btn line" style="width: 100%; box-sizing: border-box" href="{{ gr.href }}" target="_blank" rel="noopener noreferrer"><span class="msym" aria-hidden="true" style="font-size: 19px">picture_as_pdf</span>View GR · PDF, {{ gr.meta }}</a>
+          </div>
+          <div class="gr-glance-row">
+            <small>Project Implementation Unit (PIU)</small>
+            <div style="display: flex; align-items: center; gap: 16px">
+              <span style="font-size: 52px; line-height: 1; font-weight: 700; color: var(--br); letter-spacing: -.03em">{{ piuCount }}</span>
+              <span style="font-size: 14px; line-height: 1.5; color: var(--body)">members in the<br>Project Implementation Unit</span>
+            </div>
+            <a class="gr-link" style="margin-top: 16px" href="#org-chart">See staff structure<span class="msym" aria-hidden="true" style="font-size: 18px">arrow_downward</span></a>
+          </div>
+        </aside>
+      </div>
+
+      <div style="margin-top: 64px" data-reveal=""><h3 class="gr-h3">Focus sectors</h3></div>
+      <div class="gr-focus-grid">
+        <sc-for list="{{ focus }}" as="f" hint-placeholder-count="8">
+          <div class="gr-focus" data-reveal="" style="transition-delay: {{ f.delay }}">
+            <span class="gr-focus-no">{{ f.no }}</span>
+            <span class="gr-focus-ic"><span class="msym" aria-hidden="true">{{ f.icon }}</span></span>
+            <div class="gr-focus-t">{{ f.title }}</div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top: 64px" data-reveal=""><h3 class="gr-h3">SIT photos</h3></div>
+      <div class="gr-mosaic" data-reveal="">
+        <sc-for list="{{ photos }}" as="p" hint-placeholder-count="5">
+          <button type="button" class="{{ p.cls }}" onClick="{{ p.open }}" aria-label="{{ p.label }}">
+            <img src="{{ p.src }}" alt="{{ p.alt }}" loading="lazy">
+            <span class="gr-photo-zoom" aria-hidden="true"><span class="msym">zoom_out_map</span></span>
+            <span class="gr-photo-cap">{{ p.caption }}</span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 3 · Organizational structure ══ -->
+  <section id="organization" class="gr-sec tint" aria-labelledby="org-h">
+    <div class="gr-wrap">
+      <div data-reveal=""><span class="gr-eyebrow">Organization</span><h2 class="gr-h2" id="org-h">Organizational <em>structure</em></h2></div>
+
+      <div style="margin-top: 40px" data-reveal=""><h3 class="gr-h3">Leadership</h3></div>
+      <div class="gr-leaders">
+        <sc-for list="{{ leaders }}" as="l" hint-placeholder-count="4">
+          <div class="gr-card gr-leader" data-reveal="" style="transition-delay: {{ l.delay }}">
+            <span class="gr-av" aria-hidden="true">{{ l.initials }}</span>
+            <div><b>{{ l.name }}</b><span class="r">{{ l.role }}</span></div>
+          </div>
+        </sc-for>
+      </div>
+
+      <div class="gr-stack">
+        <!-- Nodal contacts -->
+        <div class="gr-card gr-pad" data-reveal="">
+          <h3 class="gr-card-h"><span class="msym" aria-hidden="true">contact_mail</span>Nodal contacts</h3>
+          <div class="gr-contacts">
+            <sc-for list="{{ contactGroups }}" as="g" hint-placeholder-count="2">
+              <div class="{{ g.cls }}">
+                <small>{{ g.title }}</small>
+                <div class="gr-people" style="--n: {{ g.n }}">
+                  <sc-for list="{{ g.people }}" as="c" hint-placeholder-count="2">
+                    <div class="gr-contact">
+                      <span class="gr-av" aria-hidden="true">{{ c.initials }}</span>
+                      <div class="gr-contact-m">
+                        <b>{{ c.name }}</b>
+                        <small>{{ c.role }}</small>
+                        <a href="{{ c.mailto }}">{{ c.email }}</a>
+                      </div>
+                      <button type="button" class="gr-copy" onClick="{{ c.copy }}" aria-label="{{ c.copyLabel }}"><span class="msym" aria-hidden="true" style="font-size: 20px">content_copy</span></button>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <!-- Governance (from the GR) -->
+        <div class="gr-card gr-pad" data-reveal="">
+          <h3 class="gr-card-h"><span class="msym" aria-hidden="true">gavel</span>Governance</h3>
+          <p class="gr-cap">As set out in the Government Resolution dated {{ gr.date }}. GRIT is to be registered as an Autonomous Society (Grant-in-aid) under the {{ gr.dept }}.</p>
+          <div class="gr-gov-cols">
+            <sc-for list="{{ governance }}" as="g" hint-placeholder-count="2">
+              <div class="gr-grp">
+                <small>{{ g.title }}</small>
+                <span class="gr-gov-meet"><span class="msym" aria-hidden="true" style="font-size: 15px">event_repeat</span>{{ g.meets }}</span>
+                <dl class="gr-dl">
+                  <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="4">
+                    <div><dt>{{ r.role }}</dt><dd>{{ r.who }}</dd></div>
+                  </sc-for>
+                </dl>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+      <!-- Organization chart (GRIT staff structure) -->
+      <div class="gr-card gr-pad" id="org-chart" style="scroll-margin-top: 96px" data-reveal="">
+        <div class="gr-chart-head">
+          <div>
+            <h3 class="gr-card-h"><span class="msym" aria-hidden="true">account_tree</span>Organization chart</h3>
+            <p class="gr-cap">GRIT staff structure</p>
+          </div>
+          <a class="gr-btn line" href="{{ orgPdf.href }}" target="_blank" rel="noopener noreferrer"><span class="msym" aria-hidden="true" style="font-size: 19px">picture_as_pdf</span>Original chart · PDF, {{ orgPdf.meta }}</a>
+        </div>
+        <div class="gr-key" role="group" aria-label="Chart key">
+          <span class="gr-key-t">Staffing type</span>
+          <ul class="gr-legend">
+            <li><span class="gr-sw st-reg"></span>Regular</li>
+            <li><span class="gr-sw st-post"></span>Post-retirement</li>
+            <li><span class="gr-sw st-cons"></span>Consultant</li>
+            <li><span class="gr-sw st-add"></span>Additional charge</li>
+          </ul>
+          <span class="gr-key-n">Numbers such as <b>1+2</b> are staffing figures exactly as shown in the original chart.</span>
+        </div>
+          <ul class="gr-tree" aria-label="GRIT staff structure">
+            <li>
+              <div class="gr-pair">
+                <div class="gr-node primary has-st st-post">
+                  <span class="ic"><span class="msym" aria-hidden="true">person</span></span>
+                  <span><b>CEO</b><small>Chief Executive Officer</small><span class="gr-meta"><span class="gr-st st-post">Post-retirement</span></span></span>
+                </div>
+                <span class="gr-pair-link" aria-hidden="true"></span>
+                <div class="gr-node has-st st-reg">
+                  <span class="ic"><span class="msym" aria-hidden="true">corporate_fare</span></span>
+                  <span><b>Secretary, Planning</b><span class="gr-meta"><span class="gr-st st-reg">Regular</span></span></span>
+                </div>
+              </div>
+              <ul>
+                <li>
+                  <div class="gr-node has-st st-post">
+                    <span class="ic"><span class="msym" aria-hidden="true">badge</span></span>
+                    <span><b>Deputy CEO</b><small>DyCEO</small><span class="gr-meta"><span class="gr-st st-post">Post-retirement</span></span></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="gr-node has-st st-add">
+                    <span class="ic"><span class="msym" aria-hidden="true">badge</span></span>
+                    <span><b>Joint CEO</b><small>Jt. CEO</small><span class="gr-meta"><span class="gr-st st-add">Additional charge</span></span></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <div class="gr-node has-st st-reg">
+                        <span class="ic"><span class="msym" aria-hidden="true">admin_panel_settings</span></span>
+                        <span><b>Admin Unit</b><span class="gr-meta"><span class="gr-st st-reg">Regular</span><span class="gr-str">1+2</span></span></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="gr-node has-st st-reg">
+                        <span class="ic"><span class="msym" aria-hidden="true">receipt_long</span></span>
+                        <span><b>Accounts Unit</b><span class="gr-meta"><span class="gr-st st-reg">Regular</span><span class="gr-str">2+1</span></span></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="gr-node">
+                        <span class="ic"><span class="msym" aria-hidden="true">groups</span></span>
+                        <span><b>Project Implementation Unit (PIU)</b><small>Three specialist units</small></span>
+                      </div>
+                      <ul>
+                        <li>
+                          <div class="gr-node has-st st-cons">
+                            <span class="ic"><span class="msym" aria-hidden="true">psychology</span></span>
+                            <span><b>Subject Expert Unit (SEU)</b><span class="gr-meta"><span class="gr-st st-cons">Consultant</span><span class="gr-str">1+3 / 1+8</span></span></span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="gr-node has-st st-cons">
+                            <span class="ic"><span class="msym" aria-hidden="true">query_stats</span></span>
+                            <span><b>Data Analytics Unit (DAU)</b><span class="gr-meta"><span class="gr-st st-cons">Consultant</span><span class="gr-str">1 / 1+1</span></span></span>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="gr-node has-st st-cons">
+                            <span class="ic"><span class="msym" aria-hidden="true">support_agent</span></span>
+                            <span><b>Core Support Unit (CSU)</b><span class="gr-meta"><span class="gr-st st-cons">Consultant</span><span class="gr-str">1+5</span></span></span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        <div class="gr-note"><span class="msym" aria-hidden="true">compare_arrows</span><span>GRIT is set up as a <b>separate institution, parallel to the Planning Department / Body</b>.</span></div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 4 · Activities and outputs ══ -->
+  <section id="activities" class="gr-sec" aria-labelledby="act-h">
+    <div class="gr-wrap">
+      <div data-reveal=""><span class="gr-eyebrow">Activities &amp; Outputs</span><h2 class="gr-h2" id="act-h">What GRIT has <em>delivered</em></h2></div>
+      <nav class="gr-subnav" aria-label="Activities and outputs" data-reveal="">
+        <a href="#publications"><span class="msym" aria-hidden="true">menu_book</span>Publications</a>
+        <a href="#workshops"><span class="msym" aria-hidden="true">groups</span>Workshops</a>
+        <a href="#lki-activities"><span class="msym" aria-hidden="true">hub</span>LKI activities</a>
+        <a href="#vision"><span class="msym" aria-hidden="true">flag</span>Vision document</a>
+      </nav>
+
+      <!-- Publications -->
+      <div class="gr-block" id="publications">
+        <div data-reveal=""><h3 class="gr-h3">Publications</h3></div>
+        <div class="gr-pubs">
+          <sc-for list="{{ pubs }}" as="b" hint-placeholder-count="3">
+            <article class="gr-card gr-pub" data-reveal="" style="transition-delay: {{ b.delay }}">
+              <a class="gr-pub-shelf" href="{{ b.file }}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                <img src="{{ b.cover }}" alt="" loading="lazy">
+              </a>
+              <div class="gr-pub-body">
+                <span class="tag"><span class="msym" aria-hidden="true" style="font-size: 16px">description</span>{{ b.type }} · {{ b.date }}</span>
+                <h4>{{ b.title }}</h4>
+                <sc-if value="{{ b.hasSub }}"><p class="sub">{{ b.subtitle }}</p></sc-if>
+                <div class="gr-pub-meta">
+                  <span><span class="msym" aria-hidden="true">picture_as_pdf</span>PDF</span>
+                  <span><span class="msym" aria-hidden="true">auto_stories</span>{{ b.pages }} pages</span>
+                  <span><span class="msym" aria-hidden="true">hard_drive</span>{{ b.size }}</span>
+                </div>
+                <div class="gr-pub-act">
+                  <a class="gr-btn dark" href="{{ b.file }}" target="_blank" rel="noopener noreferrer" aria-label="{{ b.readLabel }}"><span class="msym" aria-hidden="true" style="font-size: 18px">visibility</span>Read online</a>
+                  <a class="gr-btn line" href="{{ b.file }}" download="{{ b.fileName }}" aria-label="{{ b.dlLabel }}"><span class="msym" aria-hidden="true" style="font-size: 18px">download</span>Download</a>
+                </div>
+              </div>
+            </article>
+          </sc-for>
+        </div>
+      </div>
+
+      <!-- Workshops -->
+      <div class="gr-block" id="workshops">
+        <div data-reveal=""><h3 class="gr-h3">Workshops undertaken</h3></div>
+        <div class="gr-ws-list-wrap">
+          <sc-for list="{{ workshops }}" as="w" hint-placeholder-count="3">
+            <article class="gr-card gr-ws" data-reveal="">
+              <h4 style="font-size: inherit">
+                <button type="button" class="gr-ws-btn" aria-expanded="{{ w.expanded }}" aria-controls="{{ w.panelId }}" onClick="{{ w.toggle }}">
+                  <span class="gr-ws-tile">
+                    <sc-if value="{{ w.hasDate }}"><span class="gr-ws-tm">{{ w.tileTop }}</span><span class="gr-ws-td">{{ w.tileMain }}</span></sc-if>
+                    <sc-if value="{{ w.noDate }}"><span class="msym" aria-hidden="true">event_note</span></sc-if>
+                  </span>
+                  <span class="gr-ws-main">
+                    <span class="gr-ws-title">{{ w.title }}</span>
+                    <span class="gr-ws-meta">
+                      <sc-for list="{{ w.meta }}" as="m" hint-placeholder-count="3">
+                        <span class="gr-ws-chip"><span class="msym" aria-hidden="true">{{ m.icon }}</span>{{ m.text }}</span>
+                      </sc-for>
+                    </span>
+                  </span>
+                  <span class="gr-ws-chev" aria-hidden="true"><span class="msym">expand_more</span></span>
+                </button>
+              </h4>
+              <sc-if value="{{ w.isOpen }}">
+                <div class="gr-ws-panel" id="{{ w.panelId }}">
+                  <sc-for list="{{ w.blocks }}" as="b" hint-placeholder-count="2">
+                    <sc-if value="{{ b.isP }}"><p>{{ b.text }}</p></sc-if>
+                    <sc-if value="{{ b.isList }}">
+                      <div>
+                        <sc-if value="{{ b.hasTitle }}"><div class="gr-ws-lt">{{ b.title }}</div></sc-if>
+                        <ul class="gr-ws-ul">
+                          <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="4"><li>{{ it.t }}</li></sc-for>
+                        </ul>
+                      </div>
+                    </sc-if>
+                  </sc-for>
+                  <div><a class="gr-btn line" href="{{ w.url }}" target="_blank" rel="noopener noreferrer"><span class="msym" aria-hidden="true" style="font-size: 19px">photo_library</span>View photo gallery<span class="msym" aria-hidden="true" style="font-size: 18px">open_in_new</span></a></div>
+                </div>
+              </sc-if>
+            </article>
+          </sc-for>
+        </div>
+      </div>
+
+      <!-- LKI activities + Vision -->
+      <div class="gr-two" style="margin-top: 64px">
+        <div id="lki-activities" style="scroll-margin-top: 96px; display: flex; flex-direction: column; gap: 22px" data-reveal="">
+          <h3 class="gr-h3">LKI activities</h3>
+          <div class="gr-empty" style="flex: 1">
+            <span class="ic"><span class="msym" aria-hidden="true">hub</span></span>
+            <b>No LKI activities published yet</b>
+            <p>Activities carried out with IIM Ahmedabad will be listed here as soon as they are published.</p>
+            <a class="gr-link" href="#lki">Go to LKI<span class="msym" aria-hidden="true" style="font-size: 18px">arrow_downward</span></a>
+          </div>
+        </div>
+        <div id="vision" style="scroll-margin-top: 96px; display: flex; flex-direction: column; gap: 22px; transition-delay: 120ms" data-reveal="">
+          <h3 class="gr-h3">Vision document</h3>
+          <div class="gr-vision" style="flex: 1">
+            <a class="gr-vision-cover" href="{{ vision.file }}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true"><img src="{{ vision.cover }}" alt="" loading="lazy"></a>
+            <div class="gr-vision-m">
+              <span class="k">Vision document · {{ vision.date }}</span>
+              <h4>{{ vision.title }}</h4>
+              <p>{{ vision.blurb }}</p>
+              <div class="gr-vision-meta">PDF · {{ vision.meta }}</div>
+              <div class="gr-cta">
+                <a class="gr-btn gold" href="{{ vision.file }}" target="_blank" rel="noopener noreferrer" aria-label="Read the Viksit Gujarat @2047 vision document online (PDF, opens in a new tab)"><span class="msym" aria-hidden="true" style="font-size: 19px">visibility</span>Read online</a>
+                <a class="gr-btn ghost" href="{{ vision.file }}" download="{{ vision.fileName }}" aria-label="Download the Viksit Gujarat @2047 vision document (PDF, {{ vision.size }})"><span class="msym" aria-hidden="true" style="font-size: 19px">download</span>Download</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 5 · LKI ══ -->
+  <section id="lki" class="gr-sec gr-lki" aria-labelledby="lki-h">
+    <div class="gr-wrap">
+      <div data-reveal=""><span class="gr-eyebrow on-dark">Lead Knowledge Institution</span><h2 class="gr-h2" id="lki-h">Knowledge partner: <em style="color: var(--gold-2)">IIM Ahmedabad</em></h2></div>
+      <div class="gr-lki-grid">
+        <div class="gr-lki-card" data-reveal="">
+          <div class="gr-lki-top">
+            <span class="gr-mono" aria-hidden="true">IIMA</span>
+            <span><small>Lead Knowledge Institution</small><b>IIM Ahmedabad</b></span>
+          </div>
+          <div class="gr-lki-row">
+            <small>LKI website</small>
+            <a class="gr-btn dark" style="width: 100%; box-sizing: border-box" href="{{ lkiUrl }}" target="_blank" rel="noopener noreferrer">{{ lkiLabel }}<span class="msym" aria-hidden="true" style="font-size: 19px">open_in_new</span></a>
+          </div>
+          <div class="gr-lki-row">
+            <small>LKI nodal &amp; contact</small>
+            <div class="gr-contact" style="padding: 0">
+              <span class="gr-av" aria-hidden="true">{{ lkiNodal.initials }}</span>
+              <div class="gr-contact-m">
+                <b>{{ lkiNodal.name }}</b>
+                <small>{{ lkiNodal.role }}</small>
+                <a href="{{ lkiNodal.mailto }}">{{ lkiNodal.email }}</a>
+              </div>
+              <button type="button" class="gr-copy" onClick="{{ lkiNodal.copy }}" aria-label="{{ lkiNodal.copyLabel }}"><span class="msym" aria-hidden="true" style="font-size: 20px">content_copy</span></button>
+            </div>
+          </div>
+        </div>
+        <div data-reveal="" style="transition-delay: 120ms">
+          <h3 class="gr-lki-h"><span class="msym" aria-hidden="true">timeline</span>Activities undertaken</h3>
+          <div class="gr-timeline">
+            <div class="gr-empty on-dark">
+              <span class="ic"><span class="msym" aria-hidden="true">pending_actions</span></span>
+              <b>Activities will appear here</b>
+              <p>Work undertaken by IIM Ahmedabad with GRIT will be added to this timeline once it is published.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="gr-foot">
+    <span>Copyright © NITI Aayog · State Support Mission</span>
+    <span style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+      <a href="/"><span class="msym" aria-hidden="true" style="font-size: 17px">arrow_back</span>Back to State Support Mission</a>
+      <a href="#main"><span class="msym" aria-hidden="true" style="font-size: 17px">arrow_upward</span>Back to top</a>
+    </span>
+  </footer>
+
+  <!-- floating -->
+  <button type="button" class="gr-top" aria-label="Back to top" onClick="{{ toTop }}" style="opacity: {{ topOp }}; pointer-events: {{ topPe }}; transform: {{ topTf }}"><span class="msym" aria-hidden="true" style="font-size: 26px">keyboard_arrow_up</span></button>
+  <div class="gr-toast" role="status" aria-live="polite" style="opacity: {{ toastOp }}; transform: {{ toastTf }}"><span class="msym" aria-hidden="true">check_circle</span>{{ toastMsg }}</div>
+
+  <sc-if value="{{ lbOpen }}">
+    <div class="gr-lb" role="dialog" aria-modal="true" aria-label="Photo viewer" onClick="{{ lbClose }}">
+      <button type="button" class="gr-lb-btn gr-lb-close" aria-label="Close photo viewer" onClick="{{ lbClose }}" ref="{{ lbCloseRef }}"><span class="msym" aria-hidden="true">close</span></button>
+      <button type="button" class="gr-lb-btn gr-lb-prev" aria-label="Previous photo" onClick="{{ lbPrev }}"><span class="msym" aria-hidden="true">chevron_left</span></button>
+      <figure class="gr-lb-fig" onClick="{{ lbStop }}">
+        <img src="{{ lbSrc }}" alt="{{ lbAlt }}">
+        <figcaption><span>{{ lbCaption }}</span><span class="gr-lb-count">{{ lbCount }}</span></figcaption>
+      </figure>
+      <button type="button" class="gr-lb-btn gr-lb-next" aria-label="Next photo" onClick="{{ lbNext }}"><span class="msym" aria-hidden="true">chevron_right</span></button>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { active: '', progress: 0, showTop: false, openWs: 0, lb: -1, toast: '' };
+  stateMapRef = React.createRef();
+  rootRef = React.createRef();
+  lbCloseRef = React.createRef();
+
+  /* ── Admin payload ────────────────────────────────────────────────
+     Everything on this page is driven by this one object, so the same
+     template serves any State: the admin panel supplies a payload of
+     this shape and nothing else needs to change. */
+  getData() {
+    return {
+      stateName: 'Gujarat',
+      year: '2024',
+      brief: 'The Gujarat Rajya Institution for Transformation (GRIT) is the Government of Gujarat’s apex policy think tank, providing strategic direction for the State’s development. Through evidence-based policymaking, research, innovation, and stakeholder collaboration, GRIT supports effective policy formulation, implementation, and evaluation, promoting sustainable and inclusive growth while aligning Gujarat’s development priorities with the vision of Viksit Gujarat @2047 and Viksit Bharat @2047.',
+      website: 'www.grit.gujarat.gov.in',
+      piuCount: 5,
+      lki: { name: 'IIM Ahmedabad', website: 'www.iima.ac.in' },
+      focus: [
+        { icon: 'health_and_safety', title: 'Health and Nutrition' },
+        { icon: 'school', title: 'Education, Skilling & Employment' },
+        { icon: 'agriculture', title: 'Agriculture & Allied Sector' },
+        { icon: 'eco', title: 'Energy, Environment and Climate Change' },
+        { icon: 'account_balance', title: 'Economy & Finance' },
+        { icon: 'apartment', title: 'Urban Development' },
+        { icon: 'memory', title: 'Information Technology with AI/ML' },
+        { icon: 'factory', title: 'Industries, Infrastructure and Logistics' }
+      ],
+      photos: [
+        { src: 'assets/gujarat/gujarat-3.jpg', big: true, caption: 'Participants and organisers of the two-day workshop, Gandhinagar', alt: 'Participants and organisers of the Strengthening Evaluation Capacity workshop posing in front of the venue, with the workshop banner at the left' },
+        { src: 'assets/gujarat/gujarat-1.jpg', caption: 'Group exercises during the workshop', alt: 'Officers gathered around a table, writing on chart paper during a group exercise' },
+        { src: 'assets/gujarat/gujarat-2.jpg', caption: 'Participants working on a framework chart', alt: 'Participants discussing a framework drawn on a large sheet at a round table' },
+        { src: 'assets/gujarat/gujarat-4.jpg', caption: 'A technical session in progress', alt: 'A trainer addressing seated officers in a hall during a technical session' },
+        { src: 'assets/gujarat/gujarat-5.jpg', caption: 'Exchange of mementos at the workshop', alt: 'Two women exchanging a wrapped memento in front of the workshop backdrop while a seated official applauds' }
+      ],
+      leaders: [
+        { name: 'Shri Bhupendra Patel', role: 'Chief Minister of Gujarat' },
+        { name: 'Shri Kanubhai Desai', role: 'Hon’ble Minister, Finance (Cabinet Level)' },
+        { name: 'Ms. S. Aparna', role: 'CEO, GRIT, Govt. of Gujarat' },
+        { name: 'Ms. Ardra Agarwal, IAS', role: 'Planning Secretary' }
+      ],
+      contactGroups: [
+        { title: 'SIT nodal', people: [ { name: 'Ms. Tejal Parmar', role: 'SIT Nodal', email: 'gritoffice@gujarat.gov.in' } ] },
+        { title: 'NITI Aayog contacts', people: [
+          { name: 'Ms. Anna Roy', role: 'PD, NITI Aayog', email: 'annaroy@nic.in' },
+          { name: 'Radhika Sarda', role: 'NITI Aayog', email: 'radhika.sarda@niti.gov.in' }
+        ] }
+      ],
+      lkiNodal: { name: 'Shri Swanand Deodhar', role: 'LKI Nodal, IIM Ahmedabad', email: 'swanandd@iima.ac.in' },
+      gr: { no: 'GAD/MSM/e-file/1/2024/0661/TH', date: '12 September 2024', dept: 'General Administration Department (Planning)', file: 'assets/gujarat/docs/SIT_GR_establishment_Gujarat.pdf', pages: 4, size: '94 KB' },
+      orgPdf: { file: 'assets/gujarat/docs/GRIT_Organization_Structure.pdf', pages: 1, size: '98 KB' },
+      governance: [
+        { title: 'Governing Body (Apex Body)', meets: 'Meets at least once a year', rows: [
+          { role: 'Chairman', who: 'Hon. Chief Minister' },
+          { role: 'Vice Chairman', who: 'Hon. Finance Minister' },
+          { role: 'Member Secretary', who: 'Chief Executive Officer (CEO)' },
+          { role: 'Members', who: 'Hon. Ministers of Cabinet Level (Agriculture, Health, Industry and Education); Principal Advisor to Hon. Chief Minister; Chief Secretary; Additional Chief Secretary / Principal Secretary, Finance; Additional Chief Secretary / Principal Secretary / Secretary, Planning; six Sector Experts' },
+          { role: 'Sector experts', who: 'Agriculture; Economy & Finance; Industry, Infrastructure and Environment; Health & Nutrition; Skilling & Employment; Education' }
+        ] },
+        { title: 'Executive Committee', meets: 'Meets at least once a quarter', rows: [
+          { role: 'Chairman', who: 'Chief Executive Officer' },
+          { role: 'Convener', who: 'ACS / PS / Secretary, GAD (Planning)' },
+          { role: 'Members', who: 'The six Sector Experts; Director, Directorate of Economics & Statistics' },
+          { role: 'Invitee members', who: 'Secretaries / HoDs as requested by the CEO' }
+        ] }
+      ],
+      publications: [
+        { type: 'Policy Paper', date: 'July 2025', title: 'Blue Sky Policy for Gujarat', subtitle: 'Reviving the Horizon: A Clean Air Mission for Gujarat’s Future', cover: 'assets/gujarat/covers/bluesky.jpg', file: 'assets/gujarat/docs/Blue_Sky_Policy_Paper_for_Gujarat.pdf', pages: 64, size: '2.4 MB' },
+        { type: 'Policy Paper', date: 'June 2025', title: 'Electronic Waste Management in Gujarat', cover: 'assets/gujarat/covers/ewaste.jpg', file: 'assets/gujarat/docs/E_waste_Management_in_Gujarat_Policy_Paper.pdf', pages: 84, size: '2.7 MB' },
+        { type: 'Policy Paper', date: 'October 2025', title: 'Gujarat Spatial Computing', cover: 'assets/gujarat/covers/spatial.jpg', file: 'assets/gujarat/docs/Spatial_Computing.pdf', pages: 53, size: '1.7 MB' }
+      ],
+      vision: { title: 'Viksit Gujarat @2047', date: 'January 2024', blurb: 'Gujarat’s roadmap towards Viksit Bharat @2047. Under its GR, GRIT oversees the short- and long-term goals set out in this document.', cover: 'assets/gujarat/covers/vision.jpg', file: 'assets/gujarat/docs/Viksit_Gujarat_2047.pdf', pages: 140, size: '14.3 MB' },
+      workshops: [
+        {
+          title: 'Workshop on Strengthening Evaluation Capacity',
+          tileTop: 'MAR 2025', tileMain: '27–28',
+          meta: [ { icon: 'event', text: '27–28 March 2025' }, { icon: 'location_on', text: 'Narayani Heights, Gandhinagar' }, { icon: 'groups', text: '60+ government officers' } ],
+          url: 'https://grit.gujarat.gov.in/Admin/EventGallary?BQTRfG9lfH2PcLPq%E2%9C%A4IWoRw%E2%99%AC%E2%99%AC',
+          blocks: [
+            { p: 'The Development Monitoring and Evaluation Office (DMEO), NITI Aayog, in collaboration with Gujarat Research and Innovation Technology (GRIT) and the Directorate of Evaluation, GAD (Planning), organized a two-day workshop titled “Strengthening Evaluation Capacity” on 27–28 March 2025 at Narayani Heights, Gandhinagar. The primary objective of the workshop was to build institutional and individual capacities in Monitoring and Evaluation (M&E), supporting the broader goal of evidence-based policymaking and data-driven governance. Over 60 government officers participated in the training, which covered key frameworks and methodologies such as:' },
+            { list: ['Output-Outcome Monitoring Framework (OOMF)', 'Logical Framework Approach', 'Theory of Change', 'Data Governance Quality Index (DGQI)', 'Evaluation methods and practices'] },
+            { p: 'The workshop featured interactive sessions, group exercises, and peer reviews, fostering practical learning and cross-departmental knowledge exchange.' },
+            { title: 'Key outcomes', list: ['Enhanced understanding of evaluation frameworks and tools', 'Improved skills in data quality assessment and RFP preparation', 'Exposure to national standards and best practices in M&E', 'Recommendations to institutionalize M&E practices across departments', 'Integration of workshop learnings into departmental systems', 'Proposal to initiate pilot projects for hands-on application'] }
+          ]
+        },
+        {
+          title: 'Workshop on “Augmenting Post Harvest Economy”',
+          tileTop: 'MAR 2025', tileMain: '26',
+          meta: [ { icon: 'event', text: '26 March 2025' }, { icon: 'location_on', text: 'SPIPA, Gandhinagar' }, { icon: 'view_agenda', text: '3 technical sessions · 7 themes' } ],
+          url: 'https://grit.gujarat.gov.in/Admin/EventGallary?CE%E2%9C%BFzAcB7j%E2%9C%A45xkcgxaozDZQ%E2%99%AC%E2%99%AC',
+          blocks: [
+            { p: 'To augment the potential of post-harvest economy and catalyze the growth of value chains, the Gujarat Agro Industries Corporation (GAIC), in collaboration with the Gujarat Rajya Institution for Transformation (GRIT) the state counterpart of NITI Aayog organized a workshop on 26th March 2025 at SPIPA, Gandhinagar. The event brought together a diverse group of stakeholders including Farmer Producer Organizations (FPOs), industry experts, aggregators, agri-service providers, startups, MSMEs, and agri-preneurs to foster collaboration and propose innovative solutions. The conference featured three technical sessions covering seven thematic topics, aimed at the holistic development of Gujarat’s post-harvest supply chain ecosystem. Discussions centered on infrastructure development, technology adoption, and market linkages, with a shared vision of enhancing efficiency and creating sustainable growth opportunities across the sector.' }
+          ]
+        },
+        {
+          title: 'Workshop on “Call for Action for Nutrition in the first 1000 days”',
+          tileTop: '', tileMain: '',
+          meta: [ { icon: 'handshake', text: 'With Health, Tribal Development & UNICEF' }, { icon: 'child_care', text: 'Early childhood nutrition' } ],
+          url: 'https://grit.gujarat.gov.in/Admin/EventGallary?VigkZQlTb72V7dTDBL7e2Q%E2%99%AC%E2%99%AC',
+          blocks: [
+            { p: 'The Department of Women and Child Development, Government of Gujarat, and Gujarat Rajya Institution for Transformation, in collaboration with the Health and Family Welfare Department, Tribal Development Department and UNICEF, organised a capacity-building workshop to strengthen the capacities of officials and frontline workers on early childhood nutrition and development. The workshop brought together government officials, field-level functionaries, development partners, academicians and sectoral experts. Best practices and successful interventions from across the State were discussed. The concluding recommendations emphasised strengthening CMAM and Early Growth Faltering (EGF) training, adopting a solution-oriented approach, motivating frontline workers, and systematically documenting and disseminating best practices. A key recommendation was to pilot “Optimising Nutrition in the First 1000 Days” in select talukas across two regional zones of Gujarat, integrating maternal health and early childhood nutrition interventions through collaboration with development partners, with a focus on scalability and sustainability.' }
+          ]
+        }
+      ]
+    };
+  }
+
+  componentDidMount() {
+    const root = this.rootRef.current;
+    if (root) root.classList.add('gr-js');
+    this.loadMap();
+
+    if ('IntersectionObserver' in window) {
+      this.io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); this.io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      this.scan = () => document.querySelectorAll('[data-reveal]:not(.in)').forEach(el => this.io.observe(el));
+      this.scan();
+      this.scanT = setTimeout(this.scan, 700);
+    } else if (root) {
+      root.classList.remove('gr-js');
+    }
+
+    this.sectionIds = ['about', 'organization', 'activities', 'lki'];
+    this.ticking = false;
+    this.onScroll = () => {
+      if (this.ticking) return;
+      this.ticking = true;
+      requestAnimationFrame(() => { this.ticking = false; this.measure(); });
+    };
+    this.onKey = e => {
+      if (this.state.lb < 0) return;
+      if (e.key === 'Escape') this.closePhoto();
+      else if (e.key === 'ArrowRight') this.stepPhoto(1);
+      else if (e.key === 'ArrowLeft') this.stepPhoto(-1);
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onScroll);
+    window.addEventListener('keydown', this.onKey);
+    this.measure();
+  }
+
+  componentDidUpdate() {
+    // the runtime only passes prevProps, so remember the previous lightbox index ourselves
+    const prevLb = this._prevLb === undefined ? -1 : this._prevLb;
+    const lb = this.state.lb;
+    this._prevLb = lb;
+    if (prevLb < 0 && lb >= 0) {
+      document.body.style.overflow = 'hidden';
+      const b = this.lbCloseRef.current;
+      if (b && b.focus) b.focus();
+    } else if (prevLb >= 0 && lb < 0) {
+      document.body.style.overflow = '';
+      if (this.lastFocus && this.lastFocus.focus) this.lastFocus.focus();
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.io) this.io.disconnect();
+    clearTimeout(this.scanT);
+    clearTimeout(this.toastT);
+    if (this.onScroll) { window.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onScroll); }
+    if (this.onKey) window.removeEventListener('keydown', this.onKey);
+    document.body.style.overflow = '';
+  }
+
+  measure() {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - window.innerHeight;
+    const y = window.scrollY || doc.scrollTop || 0;
+    const p = max > 0 ? Math.min(1, Math.max(0, y / max)) : 0;
+    let active = '';
+    for (const id of this.sectionIds) {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= window.innerHeight * 0.35) active = id;
+    }
+    const progress = Math.round(p * 200) / 2;
+    const showTop = y > 700;
+    const s = this.state;
+    if (progress !== s.progress || active !== s.active || showTop !== s.showTop) this.setState({ progress, active, showTop });
+  }
+
+  openPhoto(i) { this.lastFocus = document.activeElement; this.setState({ lb: i }); }
+  closePhoto() { this.setState({ lb: -1 }); }
+  stepPhoto(d) {
+    const n = this.getData().photos.length;
+    this.setState(s => ({ lb: (s.lb + d + n) % n }));
+  }
+
+  copy(addr) {
+    const done = msg => {
+      this.setState({ toast: msg });
+      clearTimeout(this.toastT);
+      this.toastT = setTimeout(() => this.setState({ toast: '' }), 2400);
+    };
+    const fallback = () => {
+      try {
+        const t = document.createElement('textarea');
+        t.value = addr; t.setAttribute('readonly', '');
+        t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select();
+        const ok = document.execCommand('copy');
+        document.body.removeChild(t);
+        done(ok ? 'Email address copied' : 'Copy is not available — select the address instead');
+      } catch (e) { done('Copy is not available — select the address instead'); }
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(addr).then(() => done('Email address copied'), fallback);
+    else fallback();
+  }
+
+  initials(name) {
+    const parts = name.replace(/,.*$/, '').split(/\s+/).filter(w => w && !/^(shri|smt|ms\.?|mr\.?|dr\.?|prof\.?)$/i.test(w));
+    return (parts.length > 1 ? parts[0][0] + parts[parts.length - 1][0] : (parts[0] || '?').slice(0, 2)).toUpperCase();
+  }
+
+  person(p) {
+    return {
+      name: p.name, role: p.role, email: p.email, mailto: 'mailto:' + p.email,
+      initials: this.initials(p.name),
+      copyLabel: 'Copy email address of ' + p.name,
+      copy: () => this.copy(p.email)
+    };
+  }
+
+  async loadMap() {
+    const STATE_NAME = this.getData().stateName;
+    const el = this.stateMapRef.current;
+    if (!el) return;
+    try {
+      const r = await fetch('assets/india_map-fixed.svg');
+      if (!r.ok) return;
+      const holder = document.createElement('div');
+      holder.innerHTML = await r.text();
+      const svg = holder.querySelector('svg');
+      if (!svg) return;
+      svg.style.position = 'absolute';
+      svg.style.opacity = '0';
+      svg.style.pointerEvents = 'none';
+      document.body.appendChild(svg);
+
+      const paths = [...svg.querySelectorAll('path')].filter(p => {
+        if (p.closest('mask') || p.closest('defs')) return false;
+        const f = (p.getAttribute('fill') || '').toLowerCase();
+        return f !== 'white' && f !== '#fff' && f !== '#ffffff';
+      });
+      let ex0 = Infinity, ey0 = Infinity, ex1 = -Infinity, ey1 = -Infinity;
+      const boxes = new Map();
+      paths.forEach(p => {
+        try {
+          const b = p.getBBox();
+          boxes.set(p, b);
+          ex0 = Math.min(ex0, b.x); ey0 = Math.min(ey0, b.y);
+          ex1 = Math.max(ex1, b.x + b.width); ey1 = Math.max(ey1, b.y + b.height);
+        } catch (e) {}
+      });
+      const CENTROIDS = [
+        ['Jammu and Kashmir', 33.5, 75.0], ['Ladakh', 34.4, 77.5], ['Himachal Pradesh', 31.8, 77.3],
+        ['Punjab', 30.8, 75.5], ['Uttarakhand', 30.1, 79.3], ['Haryana', 29.2, 76.3],
+        ['Delhi', 28.61, 77.1], ['Rajasthan', 26.6, 73.8], ['Uttar Pradesh', 26.9, 80.6],
+        ['Bihar', 25.7, 85.6], ['Sikkim', 27.6, 88.5], ['Arunachal Pradesh', 28.0, 94.6],
+        ['Assam', 26.2, 92.9], ['Nagaland', 26.1, 94.5], ['Manipur', 24.7, 93.9],
+        ['Mizoram', 23.3, 92.8], ['Tripura', 23.8, 91.7], ['Meghalaya', 25.5, 91.3],
+        ['West Bengal', 23.7, 87.9], ['Jharkhand', 23.6, 85.5], ['Odisha', 20.5, 84.4],
+        ['Chhattisgarh', 21.3, 82.0], ['Madhya Pradesh', 23.5, 78.5], ['Gujarat', 22.7, 71.6],
+        ['Maharashtra', 19.5, 76.1], ['Telangana', 17.9, 79.1], ['Andhra Pradesh', 15.9, 79.7],
+        ['Karnataka', 14.7, 76.2], ['Goa', 15.4, 74.0], ['Kerala', 10.5, 76.3],
+        ['Tamil Nadu', 11.0, 78.4], ['Puducherry', 11.93, 79.81], ['Lakshadweep', 10.6, 72.6],
+        ['Andaman and Nicobar Islands', 10.5, 92.7],
+        ['Dadra and Nagar Haveli and Daman and Diu', 20.3, 73.0]
+      ];
+      const LON0 = 68.1, LON1 = 97.4, LAT0 = 37.1, LAT1 = 6.7;
+      const keep = [];
+      paths.forEach(p => {
+        const b = boxes.get(p); if (!b) return;
+        const lon = LON0 + ((b.x + b.width / 2) - ex0) / (ex1 - ex0) * (LON1 - LON0);
+        const lat = LAT0 + ((b.y + b.height / 2) - ey0) / (ey1 - ey0) * (LAT1 - LAT0);
+        let best = null, bd = Infinity;
+        CENTROIDS.forEach(([n, la, lo]) => {
+          const d = (la - lat) * (la - lat) + (lo - lon) * (lo - lon) * 0.85;
+          if (d < bd) { bd = d; best = n; }
+        });
+        if (best === STATE_NAME) keep.push(p);
+      });
+      if (!keep.length) { svg.remove(); return; }
+
+      const NS = 'http://www.w3.org/2000/svg';
+      const out = document.createElementNS(NS, 'svg');
+      let kx0 = Infinity, ky0 = Infinity, kx1 = -Infinity, ky1 = -Infinity;
+      keep.forEach(p => {
+        const b = boxes.get(p);
+        kx0 = Math.min(kx0, b.x); ky0 = Math.min(ky0, b.y);
+        kx1 = Math.max(kx1, b.x + b.width); ky1 = Math.max(ky1, b.y + b.height);
+      });
+      const pad = Math.max(kx1 - kx0, ky1 - ky0) * 0.06;
+      out.setAttribute('viewBox', (kx0 - pad) + ' ' + (ky0 - pad) + ' ' + ((kx1 - kx0) + pad * 2) + ' ' + ((ky1 - ky0) + pad * 2));
+      out.setAttribute('width', '100%');
+      out.setAttribute('height', '100%');
+      out.setAttribute('aria-hidden', 'true');
+      out.style.filter = 'drop-shadow(0 14px 30px rgba(0,0,0,0.5))';
+      const defs = document.createElementNS(NS, 'defs');
+      const grad = document.createElementNS(NS, 'linearGradient');
+      grad.setAttribute('id', 'gritStateFill');
+      grad.setAttribute('x1', '0'); grad.setAttribute('y1', '0');
+      grad.setAttribute('x2', '0'); grad.setAttribute('y2', '1');
+      [['0%', '#F8D77E'], ['55%', '#E9B23C'], ['100%', '#C98F27']].forEach(([o, c]) => {
+        const s = document.createElementNS(NS, 'stop');
+        s.setAttribute('offset', o); s.setAttribute('stop-color', c);
+        grad.appendChild(s);
+      });
+      defs.appendChild(grad);
+      out.appendChild(defs);
+      keep.forEach(p => {
+        const c = p.cloneNode(true);
+        c.setAttribute('fill', 'url(#gritStateFill)');
+        c.setAttribute('stroke', 'rgba(54,42,29,0.55)');
+        c.setAttribute('stroke-width', '0.6');
+        out.appendChild(c);
+      });
+      svg.remove();
+      el.innerHTML = '';
+      el.appendChild(out);
+    } catch (e) {}
+  }
+
+  renderVals() {
+    const d = this.getData();
+    const s = this.state;
+    const pad2 = n => (n < 10 ? '0' : '') + n;
+
+    const navDefs = [['about', 'About SIT'], ['organization', 'Organization'], ['activities', 'Activities & Outputs'], ['lki', 'LKI']];
+
+    const photos = d.photos.map((p, i) => ({
+      src: p.src, alt: p.alt, caption: p.caption,
+      cls: p.big ? 'gr-photo is-big' : 'gr-photo',
+      label: 'Open photo ' + (i + 1) + ' of ' + d.photos.length + ': ' + p.caption,
+      open: () => this.openPhoto(i)
+    }));
+    const lbPhoto = s.lb >= 0 ? d.photos[s.lb] : null;
+
+    const workshops = d.workshops.map((w, i) => {
+      const open = s.openWs === i;
+      return {
+        title: w.title,
+        hasDate: !!w.tileMain, noDate: !w.tileMain,
+        tileTop: w.tileTop, tileMain: w.tileMain,
+        meta: w.meta, url: w.url,
+        isOpen: open, expanded: open ? 'true' : 'false',
+        panelId: 'ws-panel-' + i,
+        toggle: () => this.setState(st => ({ openWs: st.openWs === i ? -1 : i })),
+        blocks: w.blocks.map(b => ({
+          isP: !!b.p, text: b.p || '',
+          isList: !!b.list, hasTitle: !!b.title, title: b.title || '',
+          items: (b.list || []).map(t => ({ t }))
+        }))
+      };
+    });
+
+    const lkiNodal = this.person(d.lkiNodal);
+
+    return {
+      stateMapRef: this.stateMapRef,
+      rootRef: this.rootRef,
+      lbCloseRef: this.lbCloseRef,
+      progressW: s.progress + '%',
+      nav: navDefs.map(([id, label]) => ({ href: '#' + id, label, current: s.active === id ? 'true' : 'false' })),
+      brief: d.brief,
+      siteLabel: d.website,
+      siteUrl: 'https://' + d.website,
+      piuCount: String(d.piuCount),
+      lkiLabel: d.lki.website,
+      lkiUrl: 'https://' + d.lki.website,
+      focus: d.focus.map((f, i) => ({ no: pad2(i + 1), icon: f.icon, title: f.title, delay: (i % 4) * 70 + 'ms' })),
+      photos,
+      leaders: d.leaders.map((l, i) => ({ name: l.name, role: l.role, initials: this.initials(l.name), delay: i * 70 + 'ms' })),
+      contactGroups: d.contactGroups.map(g => {
+        const n = Math.max(1, Math.min(g.people.length, 3));
+        return { title: g.title, cls: 'gr-grp gr-span-' + n, n: String(n), people: g.people.map(p => this.person(p)) };
+      }),
+      lkiNodal,
+      pubs: d.publications.map((p, i) => ({
+        type: p.type, date: p.date, title: p.title,
+        subtitle: p.subtitle || '', hasSub: !!p.subtitle,
+        cover: p.cover, file: p.file, fileName: p.file.split('/').pop(),
+        pages: String(p.pages), size: p.size,
+        readLabel: 'Read ' + p.title + ' online (PDF, opens in a new tab)',
+        dlLabel: 'Download ' + p.title + ' (PDF, ' + p.size + ')',
+        delay: i * 80 + 'ms'
+      })),
+      gr: { no: d.gr.no, date: d.gr.date, dept: d.gr.dept, href: d.gr.file, meta: d.gr.pages + ' pages · ' + d.gr.size },
+      orgPdf: { href: d.orgPdf.file, meta: d.orgPdf.size },
+      vision: {
+        title: d.vision.title, date: d.vision.date, blurb: d.vision.blurb, cover: d.vision.cover,
+        file: d.vision.file, fileName: d.vision.file.split('/').pop(), size: d.vision.size,
+        meta: d.vision.pages + ' pages · ' + d.vision.size
+      },
+      governance: d.governance.map(g => ({ title: g.title, meets: g.meets, rows: g.rows.map(r => ({ role: r.role, who: r.who })) })),
+      workshops,
+      toTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+      topOp: s.showTop ? '1' : '0',
+      topPe: s.showTop ? 'auto' : 'none',
+      topTf: s.showTop ? 'translateY(0)' : 'translateY(12px)',
+      toastMsg: s.toast || ' ',
+      toastOp: s.toast ? '1' : '0',
+      toastTf: s.toast ? 'translate(-50%, 0)' : 'translate(-50%, 14px)',
+      lbOpen: s.lb >= 0,
+      lbSrc: lbPhoto ? lbPhoto.src : '',
+      lbAlt: lbPhoto ? lbPhoto.alt : '',
+      lbCaption: lbPhoto ? lbPhoto.caption : '',
+      lbCount: lbPhoto ? (s.lb + 1) + ' / ' + d.photos.length : '',
+      lbClose: () => this.closePhoto(),
+      lbStop: e => e.stopPropagation(),
+      lbPrev: e => { e.stopPropagation(); this.stepPhoto(-1); },
+      lbNext: e => { e.stopPropagation(); this.stepPhoto(1); }
+    };
+  }
+}
+</script>
+</body>
+</html>

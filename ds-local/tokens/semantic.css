@@ -1,0 +1,5 @@
+/* Global defaults + convenience aliases on top of Figma-generated tokens */
+body{margin:0;font-family:var(--font-primary);color:var(--text-neutral-primary,#171717);background:var(--background-neutral-page,#fafafa)}
+a{color:var(--text-brand-primary-default,#4a2bc2)}
+a:hover{color:var(--colors-primary-700,#3e24a3)}
+:root{--surface-card:var(--background-neutral-primary,#fff);--text-body:var(--text-neutral-primary,#171717);--text-muted:var(--text-neutral-secondary,#404040)}

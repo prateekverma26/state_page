@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/svg+xml" href="/logo_niti-mukrilf2-nq3e.svg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Login – State Support Mission</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="rgb(54,42,29)"></rect>
+    <text x="50" y="58" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#E9B23C">SSM</text>
+  </svg>
+</template>
+<helmet>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=block" rel="stylesheet">
+  <style>
+    :root {
+      --br: #362A1D; --br-2: #543A25; --br-3: #6B4A2F;
+      --gold: #E9B23C; --gold-2: #F2C35B; --gold-d: #8A5C14; --gold-line: #D9B56A;
+      --cream: #FFFAF0; --cream-2: #FAF4E6; --cream-3: #F3EAD3;
+      --line: #E5E1D6; --line-2: #F0ECE2;
+      --ink: #171717; --body: #404040; --muted: #625C52;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+      --nav-h: 76px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Poppins', 'Noto Sans', sans-serif; color: var(--ink); background: #fff; -webkit-font-smoothing: antialiased; }
+    a { color: var(--br-3); text-decoration: none; }
+    a:hover { color: var(--br-2); }
+    button { font-family: inherit; }
+    .msym { font-family: 'Material Symbols Outlined'; font-weight: 400; font-style: normal; display: inline-block; line-height: 1; user-select: none; flex: none; }
+    :focus-visible { outline: 3px solid rgba(233,178,60,.9); outline-offset: 2px; }
+
+    /* ── Top bar ── */
+    .lg-nav { position: relative; z-index: 5; height: var(--nav-h); display: flex; align-items: stretch; gap: 22px; background: linear-gradient(100deg, #2A2017 0%, #362A1D 45%, #543A25 100%); color: #fff; box-shadow: 0 1px 0 rgba(233,178,60,.35), 0 8px 24px rgba(54,42,29,.18); }
+    .lg-nav::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, #FF9933 0 33%, #fff 33% 66%, #2E8B4A 66% 100%); opacity: .9; }
+    .lg-tab { flex: none; display: flex; align-items: center; background: #fff; padding: 0 52px 0 26px; clip-path: polygon(0 0, 100% 0, calc(100% - 34px) 100%, 0 100%); }
+    .lg-tab img { height: 50px; width: auto; display: block; }
+    .lg-brand { display: flex; flex-direction: column; justify-content: center; gap: 1px; color: #fff; min-width: 0; }
+    .lg-brand:hover { color: #fff; }
+    .lg-brand b { font-size: 17px; font-weight: 700; line-height: 1.25; white-space: nowrap; }
+    .lg-brand small { font-size: 11.5px; color: rgba(255,255,255,.68); white-space: nowrap; }
+    .lg-links { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+    .lg-links a { position: relative; color: rgba(255,255,255,.88); font-size: 14px; font-weight: 600; padding: 10px 14px; border-radius: 10px; transition: background .25s, color .25s; }
+    .lg-links a::after { content: ''; position: absolute; left: 14px; right: 14px; bottom: 5px; height: 2px; border-radius: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease); }
+    .lg-links a:hover { color: #fff; background: rgba(255,255,255,.08); }
+    .lg-links a:hover::after { transform: scaleX(1); }
+    .lg-pill { align-self: center; margin-right: 32px; display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); color: #fff; font-size: 13.5px; font-weight: 600; padding: 9px 18px 9px 14px; border-radius: 999px; white-space: nowrap; }
+    .lg-pill .msym { font-size: 20px; color: var(--gold-2); }
+
+    /* ── Split layout ── */
+    .lg-main { min-height: calc(100vh - var(--nav-h)); display: grid; grid-template-columns: minmax(0, 1fr) clamp(440px, 36vw, 620px); }
+
+    /* ── Left: showcase ── */
+    .lg-show { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; padding: 30px 48px 24px; color: #fff;
+      background:
+        radial-gradient(760px 520px at 18% 8%, rgba(233,178,60,.20), transparent 62%),
+        radial-gradient(640px 480px at 92% 96%, rgba(46,139,74,.16), transparent 62%),
+        linear-gradient(165deg, #2A2017 0%, #362A1D 48%, #4A3624 100%); }
+    .lg-show::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .9;
+      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900' fill='none' stroke='white' stroke-opacity='0.055' stroke-width='1.2'><circle cx='980' cy='980' r='420'/><circle cx='980' cy='980' r='520'/><circle cx='980' cy='980' r='620'/><circle cx='980' cy='980' r='720'/><circle cx='-60' cy='-80' r='300'/><circle cx='-60' cy='-80' r='400'/><circle cx='-60' cy='-80' r='500'/></svg>") center / cover no-repeat; }
+    .lg-show > * { position: relative; }
+    .lg-chip { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-2); background: rgba(233,178,60,.12); border: 1px solid rgba(233,178,60,.32); padding: 7px 16px 7px 12px; border-radius: 999px; }
+    .lg-chip .msym { font-size: 18px; }
+
+    .lg-stage { --cw: clamp(200px, 20vw, 292px); position: relative; width: 100%; max-width: 780px; height: clamp(280px, 40vh, 390px); margin-top: 26px; }
+    .lg-card { position: absolute; top: 0; bottom: 0; left: 50%; width: var(--cw); margin-left: calc(var(--cw) / -2); border-radius: 20px; overflow: hidden; background: #1c150e; transition: transform .75s var(--ease), opacity .6s ease, box-shadow .6s ease; will-change: transform; }
+    .lg-card.is-active { box-shadow: 0 34px 70px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.14); }
+    .lg-card.is-side { box-shadow: 0 18px 40px rgba(0,0,0,.4); cursor: pointer; }
+    .lg-card.is-off { pointer-events: none; }
+    .lg-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; user-select: none; -webkit-user-drag: none; transition: transform 1.2s var(--ease); }
+    .lg-card.is-active img { transform: scale(1.04); }
+    .lg-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,14,8,0) 38%, rgba(20,14,8,.82) 100%); transition: background .6s; }
+    .lg-card.is-side .lg-shade { background: linear-gradient(180deg, rgba(20,14,8,.35) 0%, rgba(20,14,8,.82) 100%); }
+    .lg-card-t { position: absolute; left: 20px; right: 20px; bottom: 18px; font-size: 19px; font-weight: 700; line-height: 1.25; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,.45); }
+    .lg-card.is-right .lg-card-t { left: auto; right: 18px; text-align: right; }
+    .lg-card.is-right .lg-card-n { left: auto; right: 14px; }
+    .lg-card-n { position: absolute; top: 14px; left: 16px; font-size: 12px; font-weight: 700; letter-spacing: .12em; color: rgba(255,255,255,.9); background: rgba(20,14,8,.45); backdrop-filter: blur(4px); padding: 4px 10px; border-radius: 999px; }
+    .lg-arrow { position: absolute; top: 50%; z-index: 20; width: 50px; height: 50px; margin-top: -25px; border: 0; border-radius: 50%; background: #fff; color: var(--br); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 10px 26px rgba(0,0,0,.35); transition: transform .3s var(--ease), background .25s, color .25s; }
+    .lg-arrow .msym { font-size: 30px; }
+    .lg-arrow:hover { background: var(--gold); transform: scale(1.08); }
+    .lg-prev { left: 0; }
+    .lg-next { right: 0; }
+
+    .lg-cap { position: relative; width: 100%; max-width: 560px; margin-top: 24px; display: grid; text-align: center; }
+    .lg-cap > div { grid-area: 1 / 1; transition: opacity .5s ease, transform .6s var(--ease); }
+    .lg-cap-t { font-size: 22px; font-weight: 700; line-height: 1.3; color: #fff; margin: 0; }
+    .lg-cap-d { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,.82); margin: 8px 0 0; text-wrap: balance; }
+
+    .lg-ctrl { display: flex; align-items: center; gap: 14px; margin-top: 18px; }
+    .lg-dots { display: flex; align-items: center; gap: 8px; }
+    .lg-dot { height: 8px; border: 0; padding: 0; border-radius: 999px; cursor: pointer; transition: width .45s var(--ease), background .3s; }
+    .lg-dot:hover { background: rgba(255,255,255,.7) !important; }
+
+    .lg-notes { list-style: none; margin: 26px 0 0; padding: 16px 0 0; width: 100%; max-width: 780px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 24px; border-top: 1px solid rgba(255,255,255,.12); }
+    .lg-notes li { display: flex; align-items: flex-start; gap: 9px; font-size: 12px; line-height: 1.5; color: rgba(255,255,255,.76); }
+    .lg-notes .msym { font-size: 18px; color: var(--gold); margin-top: 1px; }
+
+    /* ── Right: form ── */
+    .lg-formp { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 18px; padding: 30px 48px 20px; background: #fff; }
+    .lg-formbox { width: 100%; max-width: 440px; margin: auto 0; }
+    .lg-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-d); background: var(--cream-3); border: 1px solid #E6D6AE; padding: 6px 14px 6px 10px; border-radius: 999px; }
+    .lg-badge .msym { font-size: 18px; }
+    .lg-formbox h1 { font-size: 38px; font-weight: 700; line-height: 1.15; letter-spacing: -.01em; margin: 14px 0 0; color: var(--ink); }
+    .lg-sub { font-size: 14px; color: var(--muted); margin: 8px 0 0; }
+    .lg-tri { width: 84px; height: 4px; border-radius: 999px; margin-top: 14px; background: linear-gradient(90deg, #FF9933 0 30%, #E5E1D6 30% 62%, #2E8B4A 62% 100%); }
+
+    .lg-field { display: flex; flex-direction: column; gap: 7px; margin-top: 20px; }
+    .lg-field + .lg-field { margin-top: 14px; }
+    .lg-field label { font-size: 13.5px; font-weight: 600; color: var(--ink); padding-left: 4px; }
+    .lg-input { position: relative; display: flex; align-items: center; height: 50px; border: 1.5px solid #D9D3C6; border-radius: 999px; background: #fff; transition: border-color .25s, box-shadow .25s, background .25s; }
+    .lg-input:hover { border-color: #BDB39C; }
+    .lg-input:focus-within { border-color: var(--br-3); box-shadow: 0 0 0 4px rgba(233,178,60,.28); }
+    .lg-input > .msym { position: absolute; left: 20px; font-size: 21px; color: #9A8F7B; transition: color .25s; pointer-events: none; }
+    .lg-input:focus-within > .msym { color: var(--br-3); }
+    .lg-input input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; font-family: inherit; font-size: 15px; color: var(--ink); padding: 0 52px 0 54px; border-radius: 999px; }
+    .lg-input input::placeholder { color: #A39A89; }
+    .lg-eye { position: absolute; right: 8px; width: 40px; height: 40px; border: 0; border-radius: 50%; background: transparent; color: #7A705E; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s, color .2s; }
+    .lg-eye .msym { font-size: 22px; }
+    .lg-eye:hover { background: var(--cream-3); color: var(--br); }
+
+    .lg-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; padding: 0 4px; font-size: 13.5px; }
+    .lg-row label { display: inline-flex; align-items: center; gap: 9px; color: #52483A; cursor: pointer; }
+    .lg-row input[type=checkbox] { width: 18px; height: 18px; margin: 0; accent-color: var(--br-3); cursor: pointer; }
+    .lg-row a { font-weight: 600; }
+    .lg-row a:hover { text-decoration: underline; }
+
+    .lg-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; height: 52px; border-radius: 999px; font-size: 15.5px; font-weight: 600; transition: transform .3s var(--ease), box-shadow .3s, background .25s, color .25s, border-color .25s; }
+    .lg-btn .msym { font-size: 21px; }
+    .lg-btn-primary { margin-top: 20px; background: linear-gradient(120deg, var(--br-2), var(--br)); color: #fff; box-shadow: 0 12px 26px rgba(54,42,29,.28); }
+    .lg-btn-primary:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 18px 34px rgba(54,42,29,.34); background: linear-gradient(120deg, var(--br-3), var(--br-2)); }
+    .lg-btn-primary:active { transform: translateY(0); }
+    .lg-btn-line { border: 1.5px solid var(--br-3); color: var(--br-3); background: #fff; }
+    .lg-btn-line:hover { background: var(--cream); color: var(--br); border-color: var(--br); transform: translateY(-2px); }
+
+    .lg-or { display: flex; align-items: center; gap: 16px; margin: 16px 0; font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #8F8573; }
+    .lg-or span { flex: 1; height: 1px; background: #E5E1D6; }
+    .lg-help { font-size: 13px; line-height: 1.65; color: var(--muted); margin: 16px 0 0; text-align: center; }
+    .lg-callout { display: flex; gap: 12px; align-items: flex-start; margin-top: 14px; padding: 14px 16px; background: var(--cream-2); border: 1px solid #EADFC4; border-radius: 16px; }
+    .lg-callout .msym { font-size: 20px; color: var(--gold-d); margin-top: 1px; }
+    .lg-callout p { margin: 0; font-size: 12.5px; line-height: 1.65; color: #52483A; }
+    .lg-copy { font-size: 12px; color: #8F8573; text-align: center; }
+
+    /* ── Responsive ── */
+    @media (max-width: 1180px) {
+      .lg-links a { padding: 10px 10px; }
+      .lg-show { padding: 36px 32px 28px; }
+    }
+    @media (max-width: 960px) {
+      .lg-links { display: none; }
+      .lg-pill { margin-left: auto; }
+      .lg-main { grid-template-columns: minmax(0, 1fr); }
+      .lg-formp { order: 1; padding: 36px 24px 24px; }
+      .lg-show { order: 2; padding: 44px 24px 36px; }
+      .lg-stage { --cw: clamp(190px, 40vw, 280px); height: 330px; }
+    }
+    @media (max-width: 600px) {
+      :root { --nav-h: 64px; }
+      .lg-tab { padding: 0 44px 0 16px; }
+      .lg-tab img { height: 40px; }
+      .lg-brand small { display: none; }
+      .lg-brand b { font-size: 15px; }
+      .lg-nav { gap: 14px; }
+      .lg-pill { margin-right: 14px; padding: 8px 12px; font-size: 0; gap: 0; }
+      .lg-pill .msym { font-size: 22px; }
+      .lg-formbox h1 { font-size: 32px; }
+      .lg-stage { --cw: min(62vw, 250px); height: 300px; }
+      .lg-arrow { width: 42px; height: 42px; margin-top: -21px; }
+      .lg-arrow .msym { font-size: 26px; }
+      .lg-notes { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+      .lg-cap-t { font-size: 19px; }
+      .lg-card.is-side .lg-card-t, .lg-card.is-side .lg-card-n { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .lg-card, .lg-card img, .lg-cap > div, .lg-dot, .lg-btn, .lg-arrow { transition: none !important; }
+    }
+  </style>
+</helmet>
+
+<header class="lg-nav">
+  <a class="lg-tab" href="/" aria-label="NITI Aayog - State Support Mission home"><img src="./logo_niti-mukrilf2-nq3e.svg" alt="NITI Aayog"></a>
+  <a class="lg-brand" href="/"><b>State Support Mission</b><small>NITI Aayog · Government of India</small></a>
+  <nav class="lg-links" aria-label="Main">
+    <a href="/">Home</a>
+    <a href="/sit-karnataka">SITs</a>
+    <a href="/niti-state-workshops">Workshops</a>
+    <a href="/publications">Publications</a>
+    <a href="/testimonials">Testimonials</a>
+  </nav>
+  <span class="lg-pill" aria-current="page"><span class="msym" aria-hidden="true">admin_panel_settings</span>Admin Login</span>
+</header>
+
+<main class="lg-main">
+  <!-- ══ Left: SSM showcase ══ -->
+  <section class="lg-show" aria-label="About the State Support Mission">
+    <span class="lg-chip"><span class="msym" aria-hidden="true">workspaces</span>Five SSM components</span>
+
+    <div class="lg-stage" role="region" aria-roledescription="carousel" aria-label="State Support Mission components" onMouseEnter="{{ hoverOn }}" onMouseLeave="{{ hoverOff }}" onFocus="{{ hoverOn }}" onBlur="{{ hoverOff }}">
+      <button type="button" class="lg-arrow lg-prev" onClick="{{ prev }}" aria-label="Previous component"><span class="msym" aria-hidden="true">chevron_left</span></button>
+      <sc-for list="{{ cards }}" as="c" hint-placeholder-count="5">
+        <div class="{{ c.cls }}" style="transform: translateX({{ c.tx }}%) scale({{ c.sc }}); opacity: {{ c.op }}; z-index: {{ c.z }}" onClick="{{ c.pick }}" role="group" aria-roledescription="slide" aria-label="{{ c.label }}" aria-hidden="{{ c.hidden }}">
+          {{ c.imgEl }}
+          <span class="lg-shade"></span>
+          <span class="lg-card-n">{{ c.num }}</span>
+          <span class="lg-card-t">{{ c.short }}</span>
+        </div>
+      </sc-for>
+      <button type="button" class="lg-arrow lg-next" onClick="{{ next }}" aria-label="Next component"><span class="msym" aria-hidden="true">chevron_right</span></button>
+    </div>
+
+    <div class="lg-cap" aria-live="{{ live }}" aria-atomic="true">
+      <sc-for list="{{ caps }}" as="k" hint-placeholder-count="5">
+        <div style="opacity: {{ k.op }}; transform: translateY({{ k.y }}px); visibility: {{ k.vis }}">
+          <p class="lg-cap-t">{{ k.title }}</p>
+          <p class="lg-cap-d">{{ k.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+
+    <div class="lg-ctrl">
+      <div class="lg-dots">
+        <sc-for list="{{ dots }}" as="d" hint-placeholder-count="5">
+          <button type="button" class="lg-dot" onClick="{{ d.pick }}" aria-label="{{ d.label }}" aria-current="{{ d.current }}" style="width: {{ d.w }}px; background: {{ d.bg }}"></button>
+        </sc-for>
+      </div>
+    </div>
+
+    <ul class="lg-notes">
+      <li><span class="msym" aria-hidden="true">verified_user</span>Access is issued against your official gov.in / nic.in email</li>
+      <li><span class="msym" aria-hidden="true">edit_note</span>Administrators can add workshops, publications and SIT/LKI updates</li>
+      <li><span class="msym" aria-hidden="true">hub</span>Single sign-on with the NITI For States (NFS) platform</li>
+    </ul>
+  </section>
+
+  <!-- ══ Right: sign-in ══ -->
+  <section class="lg-formp" aria-labelledby="lg-h">
+    <div class="lg-formbox">
+      <span class="lg-badge"><span class="msym" aria-hidden="true">admin_panel_settings</span>SSM Administrator</span>
+      <h1 id="lg-h">Sign in</h1>
+      <p class="lg-sub">Planning Secretary / authorised officer</p>
+      <div class="lg-tri" aria-hidden="true"></div>
+
+      <div class="lg-field">
+        <label for="ssm-email">Official email</label>
+        <div class="lg-input">
+          <span class="msym" aria-hidden="true">mail</span>
+          <input id="ssm-email" name="email" type="email" autocomplete="username" inputmode="email" placeholder="name[at]gov[dot]in">
+        </div>
+      </div>
+      <div class="lg-field">
+        <label for="ssm-pass">Password</label>
+        <div class="lg-input">
+          <span class="msym" aria-hidden="true">lock</span>
+          <input id="ssm-pass" name="password" type="{{ pwType }}" autocomplete="current-password" placeholder="••••••••">
+          <button type="button" class="lg-eye" onClick="{{ togglePw }}" aria-label="{{ pwLabel }}" aria-pressed="{{ pwPressed }}"><span class="msym" aria-hidden="true">{{ pwIcon }}</span></button>
+        </div>
+      </div>
+
+      <div class="lg-row">
+        <label><input type="checkbox">Remember me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <a class="lg-btn lg-btn-primary" href="/"><span class="msym" aria-hidden="true">login</span>Sign in to SSM</a>
+
+      <div class="lg-or" aria-hidden="true"><span></span>or<span></span></div>
+
+      <a class="lg-btn lg-btn-line" href="#"><span class="msym" aria-hidden="true">hub</span>Continue with NFS account</a>
+
+      <p class="lg-help">Need access? Write to <a href="#">nfs-niti[at]gov[dot]in</a> from your official email with your designation and State.</p>
+
+      <div class="lg-callout">
+        <span class="msym" aria-hidden="true">info</span>
+        <p>The SSM section is available to authorised users only. Planning Secretaries of each State and UT are the designated SSM administrators for their respective State.</p>
+      </div>
+    </div>
+    <div class="lg-copy">Copyright © NITI Aayog · nfs-niti[at]gov[dot]in</div>
+  </section>
+</main>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { idx: 0, playing: true, paused: false, showPw: false };
+
+  /* The showcase is driven by this list (the five SSM components, worded as on the SSM site),
+     so the admin panel can swap images or text without touching the template. */
+  getData() {
+    return {
+      slides: [
+        { short: 'PIU', title: 'Programme Implementation Unit', img: 'assets/login/slide-piu.jpg', pos: '36% 50%',
+          alt: 'PIU team planning the work programme',
+          desc: 'A multidisciplinary team of up to nine sectoral experts, including a Team Leader, supporting planning, coordination and implementation.' },
+        { short: 'M & E', title: 'Monitoring, Evaluation & Data Analytics Unit', img: 'assets/login/slide-me.jpg', pos: '72% 50%',
+          alt: 'Officials reviewing a data analytics dashboard',
+          desc: 'Evidence-based policymaking, data-driven governance and effective monitoring of development outcomes.' },
+        { short: 'LKI', title: 'Lead Knowledge Institution', img: 'assets/login/slide-lki.jpg', pos: '50% 50%',
+          alt: 'Researchers from a Lead Knowledge Institution collaborating with State officials',
+          desc: 'Partnering with an IIM, IIT, university or other institution of excellence for domain expertise and policy support.' },
+        { short: 'Knowledge Products', title: 'Knowledge Products', img: 'assets/login/slide-kp.jpg', pos: '30% 50%',
+          alt: 'Knowledge products supporting State planning',
+          desc: 'The NITI for States Portal, Viksit Bharat Strategy Room and NITI TARA, tools to strengthen planning and governance.' },
+        { short: 'Capacity Building', title: 'Capacity Building', img: 'assets/login/slide-cb.jpg', pos: '70% 50%',
+          alt: 'Capacity building workshop for State officials',
+          desc: 'Workshops, training programmes and knowledge-sharing forums for SITs, State and Central Government officials and domain experts.' }
+      ]
+    };
+  }
+
+  componentDidMount() {
+    const reduce = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) this.setState({ playing: false });
+    this.timer = setInterval(() => {
+      const s = this.state;
+      if (!s.playing || s.paused || document.hidden) return;
+      this.step(1);
+    }, 5600);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+
+  step(d) {
+    const n = this.getData().slides.length;
+    this.setState(s => ({ idx: (s.idx + d + n) % n }));
+  }
+
+  renderVals() {
+    const slides = this.getData().slides;
+    const n = slides.length;
+    const s = this.state;
+    const half = Math.floor(n / 2);
+    const rel = i => ((i - s.idx + n + half) % n) - half; // -2 … 2 for five slides
+
+    const cards = slides.map((c, i) => {
+      const r = rel(i);
+      const a = Math.abs(r);
+      return {
+        cls: 'lg-card ' + (r === 0 ? 'is-active' : a === 1 ? 'is-side' : 'is-off') + (r > 0 ? ' is-right' : ''),
+        tx: r * 80,
+        sc: r === 0 ? 1 : a === 1 ? 0.84 : 0.7,
+        op: r === 0 ? 1 : a === 1 ? 0.92 : 0,
+        z: String(10 - a),
+        pick: () => this.setState({ idx: i }),
+        label: (i + 1) + ' of ' + n + ': ' + c.title,
+        hidden: r === 0 ? 'false' : 'true',
+        imgEl: React.createElement('img', { key: c.img, src: c.img, alt: c.alt, draggable: false, style: { objectPosition: c.pos } }),
+        short: c.short,
+        num: String(i + 1).padStart(2, '0') + ' / ' + String(n).padStart(2, '0')
+      };
+    });
+    const caps = slides.map((c, i) => ({
+      title: c.title, desc: c.desc,
+      op: i === s.idx ? 1 : 0,
+      y: i === s.idx ? 0 : 10,
+      vis: i === s.idx ? 'visible' : 'hidden'
+    }));
+    const dots = slides.map((c, i) => ({
+      w: i === s.idx ? 30 : 8,
+      bg: i === s.idx ? '#E9B23C' : 'rgba(255,255,255,.38)',
+      label: 'Show ' + c.title,
+      current: i === s.idx ? 'true' : 'false',
+      pick: () => this.setState({ idx: i })
+    }));
+
+    return {
+      cards, caps, dots,
+      prev: () => this.step(-1),
+      next: () => this.step(1),
+      hoverOn: () => this.setState({ paused: true }),
+      hoverOff: () => this.setState({ paused: false }),
+      live: s.playing ? 'off' : 'polite',
+      pwType: s.showPw ? 'text' : 'password',
+      pwIcon: s.showPw ? 'visibility_off' : 'visibility',
+      pwLabel: s.showPw ? 'Hide password' : 'Show password',
+      pwPressed: s.showPw ? 'true' : 'false',
+      togglePw: () => this.setState(st => ({ showPw: !st.showPw }))
+    };
+  }
+}
+</script>
+</body>
+</html>
