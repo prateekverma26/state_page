@@ -37,36 +37,76 @@
       .st-oc-row { grid-template-columns: minmax(0, 1fr); padding-top: 0; }
       .st-oc-row::before, .st-oc-row > div::before, .st-oc-link { display: none; }
     }
+  
+    /* ssm-chrome: shared SSM header / footer */
+    .ssm-foot-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; }
+    .ssm-pills { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-size: 14px; font-weight: 600; }
+    .ssm-pills a { color: rgb(23,23,23); padding: 8px 16px; border-radius: 999px; white-space: nowrap; transition: background .2s; text-decoration: none; }
+    .ssm-pills a:hover { background: rgb(246,238,219); color: rgb(23,23,23); text-decoration: none; }
+    @media (min-width: 1100px) { .ssm-subnav { position: sticky; top: 81px; z-index: 45; } }
+    @media (max-width: 1099px) { .ssm-hdr { position: static !important; } }
+    @media (max-width: 900px) { .ssm-foot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; } }
+    @media (max-width: 640px) {
+      .ssm-sep { display: none; }
+      .ssm-strip, .ssm-hdr, .ssm-subnav-in, .ssm-foot-bar { padding-left: 20px !important; padding-right: 20px !important; }
+      .ssm-foot-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-left: 20px !important; padding-right: 20px !important; }
+    }
   </style>
 </helmet>
 
 <div>
 <!-- ══ Government strip ══ -->
 <div style="height: 4px; background: linear-gradient(90deg, #FF9933 0%, #E9B23C 35%, #FFFFFF 55%, #2E8B4A 100%)"></div>
-<div style="background: rgb(54,42,29); color: rgba(255,255,255,0.92); font-size: 12.5px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; padding: 6px 40px">
-  <div style="display: flex; align-items: center; gap: 16px"><span>भारत सरकार</span><span style="opacity: 0.4">|</span><span>Government of India</span></div>
-  <a href="/" style="color: #FFFFFF; font-weight: 600; font-size: 12.5px; display: flex; align-items: center; gap: 6px"><span aria-hidden="true" class="msym" style="font-size: 15px">arrow_back</span>Back to State Support Mission</a>
+<div class="ssm-strip" style="background: rgb(54,42,29); color: rgba(255,255,255,0.92); font-size: 12.5px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; padding: 6px 40px">
+  <div style="display: flex; align-items: center; gap: 16px">
+    <span>भारत सरकार</span>
+    <span style="opacity: 0.4">|</span>
+    <span>Government of India</span>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px 20px">
+    <a href="#main" style="color: rgba(255,255,255,0.92); font-size: 12.5px">Skip to Main Content</a>
+    <span class="ssm-sep" style="opacity: 0.4">|</span>
+    <span style="display: flex; align-items: center; gap: 6px"><span class="msym" style="font-size: 16px">language</span>English<span class="msym" style="font-size: 16px">expand_more</span></span>
+    <span class="ssm-sep" style="opacity: 0.4">|</span>
+    <a href="/login" style="color: #FFFFFF; font-weight: 600; font-size: 12.5px; display: flex; align-items: center; gap: 6px"><span class="msym" style="font-size: 16px">login</span>Login</a>
+  </div>
 </div>
 
 <!-- ══ Header ══ -->
-<header style="background: #FFFFFF; border-bottom: 1px solid rgb(229,229,229); padding: 14px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px; position: sticky; top: 0; z-index: 50">
-  <a href="/" style="display: flex; align-items: center; gap: 14px">
-    <img src="logo_niti-mukrilf2-nq3e.svg" alt="NITI Aayog" style="height: 52px; width: auto; display: block"/>
+<header class="ssm-hdr" style="background: #FFFFFF; border-bottom: 1px solid rgb(229,229,229); padding: 14px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px; position: sticky; top: 0; z-index: 50">
+  <a href="/" style="display: flex; align-items: center; gap: 14px; text-decoration: none">
+    <img src="./logo_niti-mukrilf2-nq3e.svg" alt="NITI Aayog" style="height: 52px; width: auto; display: block">
     <span style="display: flex; flex-direction: column; gap: 2px">
-      <span style="font-size: 20px; font-weight: 700; color: rgb(23,23,23); line-height: 1.2">State Support Mission</span>
-      <span style="font-size: 12px; color: rgb(100,100,100)">NITI Aayog · Government of India</span>
+      <span style="font-family: 'Poppins', 'Noto Sans', sans-serif; font-size: 20px; font-weight: 700; color: rgb(23,23,23); line-height: 1.2">State Support Mission</span>
+      <span style="font-size: 12px; color: rgb(115,115,115)">NITI Aayog · Government of India</span>
     </span>
   </a>
-  <nav aria-label="Page sections" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 14.5px; font-weight: 600">
-    <a href="#about" style="color: rgb(23,23,23)">About SIT</a>
-    <a href="#organization" style="color: rgb(23,23,23)">Organization</a>
-    <a href="#activities" style="color: rgb(23,23,23)">Activities &amp; Outputs</a>
-    <a href="#lki" style="color: rgb(23,23,23)">LKI</a>
+  <nav aria-label="Primary" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 14.5px; font-weight: 600">
+    <a href="/#overview" style="color: rgb(23,23,23)">Overview</a>
+    <a href="/#workshop" style="color: rgb(107,74,47); border-bottom: 2px solid rgb(176,124,44); padding-bottom: 2px">SITs</a>
+    <a href="/#workshop" style="color: rgb(23,23,23)">LKIs</a>
+    <a href="/#workshops" style="color: rgb(23,23,23)">Workshops</a>
+    <a href="/#publications" style="color: rgb(23,23,23)">Publications</a>
+    <a href="#" style="color: rgb(23,23,23)">Gallery</a>
+    <a href="/login" style="background: rgb(54,42,29); color: #FFFFFF; font-size: 13.5px; font-weight: 600; padding: 9px 20px; border-radius: 8px; text-decoration: none" style-hover="background: rgb(84,58,37)">Admin Login</a>
   </nav>
 </header>
 
+<!-- ══ Page sub-navigation ══ -->
+<div class="ssm-subnav" style="background: rgb(255,253,247); border-bottom: 1px solid rgb(233,222,199)">
+  <div class="ssm-subnav-in" style="max-width: 1200px; margin: 0 auto; padding: 8px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px">
+    <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 700; color: rgb(107,74,47)"><span aria-hidden="true" class="msym" style="font-size: 17px; color: rgb(176,124,44)">location_on</span>SIT Karnataka</span>
+    <nav class="ssm-pills" aria-label="Page sections">
+      <a href="#about">About SIT</a>
+      <a href="#organization">Organization</a>
+      <a href="#activities">Activities &amp; Outputs</a>
+      <a href="#lki">LKI</a>
+    </nav>
+  </div>
+</div>
+
 <!-- ══ 1 · Hero banner ══ -->
-<section style="background: rgb(54,42,29); color: #FFFFFF">
+<section id="main" style="background: rgb(54,42,29); color: #FFFFFF">
   <div style="max-width: 1200px; margin: 0 auto; padding: 56px 40px 56px">
     <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 12.5px; color: rgba(255,255,255,0.78)">
       <a href="/" style="color: rgba(255,255,255,0.78)">SSM</a><span aria-hidden="true" class="msym" style="font-size: 14px">chevron_right</span><span>SITs</span><span aria-hidden="true" class="msym" style="font-size: 14px">chevron_right</span><span style="color: #E9B23C">SIT Karnataka</span>
@@ -117,7 +157,7 @@
 </section>
 
 <!-- ══ 2 · About SIT ══ -->
-<section id="about" style="max-width: 1200px; margin: 0 auto; padding: 72px 40px; scroll-margin-top: 100px">
+<section id="about" style="max-width: 1200px; margin: 0 auto; padding: 72px 40px; scroll-margin-top: 140px">
   <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138,92,20); margin-bottom: 12px">About SIT</div>
   <h2 style="font-size: 30px; font-weight: 700; margin: 0 0 28px">Mandate of <span style="color: rgb(107,74,47)">SIT Karnataka</span></h2>
   <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 36px 40px">
@@ -160,7 +200,7 @@
 </section>
 
 <!-- ══ 3 · Organizational structure ══ -->
-<section id="organization" style="background: rgb(250,244,230); border-top: 1px solid rgb(233,222,199); border-bottom: 1px solid rgb(233,222,199); scroll-margin-top: 100px">
+<section id="organization" style="background: rgb(250,244,230); border-top: 1px solid rgb(233,222,199); border-bottom: 1px solid rgb(233,222,199); scroll-margin-top: 140px">
   <div style="max-width: 1200px; margin: 0 auto; padding: 72px 40px">
     <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138,92,20); margin-bottom: 12px">Organization</div>
     <h2 style="font-size: 30px; font-weight: 700; margin: 0 0 32px">Organizational <span style="color: rgb(107,74,47)">structure</span></h2>
@@ -240,7 +280,7 @@
 </section>
 
 <!-- ══ 4 · Activities and outputs ══ -->
-<section id="activities" style="max-width: 1200px; margin: 0 auto; padding: 72px 40px; scroll-margin-top: 100px">
+<section id="activities" style="max-width: 1200px; margin: 0 auto; padding: 72px 40px; scroll-margin-top: 140px">
   <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(138,92,20); margin-bottom: 12px">Activities &amp; Outputs</div>
   <h2 style="font-size: 30px; font-weight: 700; margin: 0 0 32px">What SIT Karnataka has <span style="color: rgb(107,74,47)">delivered</span></h2>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(480px, 100%), 1fr)); gap: 24px; align-items: stretch">
@@ -343,7 +383,7 @@
 </section>
 
 <!-- ══ 5 · LKI ══ -->
-<section id="lki" style="background: rgb(54,42,29); color: #FFFFFF; scroll-margin-top: 100px">
+<section id="lki" style="background: rgb(54,42,29); color: #FFFFFF; scroll-margin-top: 140px">
   <div style="max-width: 1200px; margin: 0 auto; padding: 72px 40px">
     <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #E9B23C; margin-bottom: 12px">Lead Knowledge Institution</div>
     <h2 style="font-size: 30px; font-weight: 700; margin: 0 0 36px">Working with <span style="color: #E9B23C">IIM Bangalore</span></h2>
@@ -400,7 +440,68 @@
     </div>
   </div>
 </section>
-<div style="background: rgb(38,29,20); color: rgba(255,255,255,0.7); font-size: 12px; text-align: center; padding: 14px">Copyright © NITI Aayog · State Support Mission</div>
+<!-- ══ Footer ══ -->
+<footer style="background: rgb(54,42,29); background-image: radial-gradient(rgba(233,178,60,0.13) 1.2px, transparent 1.2px); background-size: 22px 22px; color: rgba(255,255,255,0.85)">
+  <div style="height: 4px; background: linear-gradient(90deg, #E9B23C 0 50%, #362A1D 50% 100%)"></div>
+  <div class="ssm-foot-grid" style="max-width: 1200px; margin: 0 auto; padding: 64px 40px 48px">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <img src="uploads/logo_1.png" alt="NITI Aayog" style="height: 56px; width: auto; display: block; filter: brightness(0) invert(1)">
+        <span style="font-family: 'Poppins', 'Noto Sans', sans-serif; font-size: 19px; font-weight: 700; color: #FFFFFF">State Support Mission</span>
+      </div>
+      <p style="font-size: 13.5px; line-height: 1.7; margin: 0; color: rgba(255,255,255,0.7); text-wrap: pretty; text-align: justify">The State Support Mission (SSM) is an umbrella initiative of NITI Aayog that fosters structured and institutionalized engagement with States and Union Territories to support their socio-economic development goals.</p>
+      <div style="font-size: 13.5px; display: flex; align-items: center; gap: 8px"><span class="msym" style="font-size: 17px; color: #E9B23C">mail</span>ssm-niti@gov.in</div>
+    </div>
+    <div>
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; margin-bottom: 16px; display: flex; align-items: center; gap: 8px">Mission</div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13.5px">
+        <a href="/" style="color: rgba(255,255,255,0.75)">Home</a>
+        <a href="/#overview" style="color: rgba(255,255,255,0.75)">Overview</a>
+        <a href="/#objectives" style="color: rgba(255,255,255,0.75)">Objectives</a>
+        <a href="/#components" style="color: rgba(255,255,255,0.75)">Components</a>
+        <a href="/#workshop" style="color: rgba(255,255,255,0.75)">Workshops</a>
+        <a href="/#tools" style="color: rgba(255,255,255,0.75)">Knowledge Tools</a>
+        <a href="/#publications" style="color: rgba(255,255,255,0.75)">Publication</a>
+        <a href="/#contact" style="color: rgba(255,255,255,0.75)">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; margin-bottom: 16px; display: flex; align-items: center; gap: 8px">SIT</div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13.5px">
+        <a href="/#overview" style="color: rgba(255,255,255,0.75)">About SITs</a>
+        <a href="/#workshop" style="color: rgba(255,255,255,0.75)">SITs across States</a>
+        <a href="/#publications" style="color: rgba(255,255,255,0.75)">SIT Publications</a>
+      </div>
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; margin: 28px 0 16px; display: flex; align-items: center; gap: 8px">LKI</div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13.5px">
+        <a href="/#workshop" style="color: rgba(255,255,255,0.75)">About LKIs</a>
+        <a href="/#workshop" style="color: rgba(255,255,255,0.75)">Partner Institutions</a>
+        <a href="/#publications" style="color: rgba(255,255,255,0.75)">LKI Publications</a>
+        <a href="/#engage" style="color: rgba(255,255,255,0.75)">Become an LKI</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; margin-bottom: 16px; display: flex; align-items: center; gap: 8px">Gallery</div>
+      <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13.5px">
+        <a href="/#workshops" style="color: rgba(255,255,255,0.75)">Workshop Photos</a>
+        <a href="/#tools" style="color: rgba(255,255,255,0.75)">Event Videos</a>
+        <a href="/#workshops" style="color: rgba(255,255,255,0.75)">NITI-State Workshop Series</a>
+        <a href="#" style="color: rgba(255,255,255,0.75)">Press &amp; Media Coverage</a>
+        <a href="/testimonials" style="color: rgba(255,255,255,0.75)">Testimonials</a>
+      </div>
+    </div>
+  </div>
+  <div style="border-top: 1px solid rgba(255,255,255,0.12)">
+    <div class="ssm-foot-bar" style="max-width: 1200px; margin: 0 auto; padding: 20px 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; font-size: 12.5px; color: rgba(255,255,255,0.6)">
+      <span>Copyright © NITI Aayog, Delhi</span>
+      <div style="display: flex; gap: 24px">
+        <a href="#" style="color: rgba(255,255,255,0.6)">Terms &amp; Conditions</a>
+        <a href="#" style="color: rgba(255,255,255,0.6)">Privacy policy</a>
+        <a href="/#contact" style="color: rgba(255,255,255,0.6)">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>

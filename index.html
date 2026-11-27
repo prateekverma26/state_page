@@ -383,7 +383,7 @@
                 <span class="msym" style="font-size: 17px; color: rgb(176,124,44)">search</span>
                 <input value="{{ stateQuery }}" onChange="{{ setStateQuery }}" onKeyDown="{{ stopKeys }}" onKeyUp="{{ stopKeys }}" onKeyPress="{{ stopKeys }}" onClick="{{ stopKeys }}" placeholder="Search state" aria-label="Search state" style="border: none; outline: none; background: transparent; font-size: 13.5px; color: rgb(23,23,23); width: 100%; font-family: 'Noto Sans', sans-serif">
               </div>
-              <div style="max-height: 232px; overflow-y: auto; display: flex; flex-direction: column">
+              <div style="max-height: 272px; overflow-y: auto; overscroll-behavior: contain; display: flex; flex-direction: column">
               <sc-if value="{{ hasStateSugs }}" hint-placeholder-val="{{ true }}">
               <sc-for list="{{ stateSuggestions }}" as="sug" hint-placeholder-count="3">
                 <button onMouseDown="{{ sug.pick }}" style="display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; background: transparent; border: none; border-radius: 8px; padding: 8px 10px; font-size: 13.5px; color: rgb(23,23,23); cursor: pointer; font-family: 'Noto Sans', sans-serif" style-hover="background: rgb(251,244,229); color: rgb(107,74,47)"><span class="msym" style="font-size: 16px; color: rgb(176,124,44)">location_on</span>{{ sug.name }}</button>
@@ -1208,7 +1208,7 @@ class Component extends DCLogic {
   allStates = ["NITI Aayog","Andaman & Nicobar Islands","Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chandigarh","Chhattisgarh","Dadra and Nagar Haveli and Daman and Diu","Delhi","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu & Kashmir","Jharkhand","Karnataka","Ladakh","Lakshadweep","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Puducherry","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal"];
   stateSugs() {
     const q = (this.state.stateQuery || '').trim().toLowerCase();
-    return (q ? this.allStates.filter(n => n.toLowerCase().includes(q)) : this.allStates).slice(0, 8);
+    return q ? this.allStates.filter(n => n.toLowerCase().includes(q)) : this.allStates;
   }
   mapTourStart() { clearInterval(this.mapTourTimer); this.mapTourTimer = setInterval(() => this.mapTourTick(), 3000); }
   mapTourTick() {
